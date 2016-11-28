@@ -27,6 +27,6 @@
   <files>
     <file src="..\LICENSE" />
     <file src="Atata.Bootstrap\bin\Release\Atata.Bootstrap.dll" target="lib\net40" />
-    <!--<file src="Atata.Bootstrap\bin\Release\Atata.Bootstrap.xml" target="lib\net40" />-->
+    <file src="Atata.Bootstrap\bin\Release\Atata.Bootstrap.xml" target="lib\net40" />
   </files>
 </package>

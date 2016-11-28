@@ -21,6 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>..\Atata.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\Atata.Bootstrap.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+	<CodeAnalysisRuleSet>..\Atata.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Release\Atata.Bootstrap.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Atata, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -57,6 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BSClickTabAttribute.cs" />
+    <Compile Include="BSDropdown`1.cs" />
+    <Compile Include="BSModal`1.cs" />
+    <Compile Include="BSNavbar`1.cs" />
+    <Compile Include="BSTabPane`1.cs" />
+    <Compile Include="BSTab`1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
