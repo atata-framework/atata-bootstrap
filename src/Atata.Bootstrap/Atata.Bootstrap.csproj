@@ -30,12 +30,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-	<CodeAnalysisRuleSet>..\Atata.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\Atata.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\Release\Atata.Bootstrap.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atata, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Atata.0.11.0\lib\net40\Atata.dll</HintPath>
+    <Reference Include="Atata, Version=0.11.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Atata.0.11.1\lib\net40\Atata.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Atata.WebDriverExtras, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -69,7 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
