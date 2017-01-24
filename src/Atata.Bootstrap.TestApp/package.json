@@ -1,0 +1,10 @@
+{
+  "name": "Atata.Bootstrap.TestApp",
+  "version": "1.0.0",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}

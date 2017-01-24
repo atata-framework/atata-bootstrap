@@ -10,8 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Atata.Bootstrap.nuspec = Atata.Bootstrap.nuspec
 		Atata.ruleset = Atata.ruleset
 		..\build.bat = ..\build.bat
+		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
 		..\README.md = ..\README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atata.Bootstrap.TestApp", "Atata.Bootstrap.TestApp\Atata.Bootstrap.TestApp.csproj", "{BB08E10A-6381-4B3E-8917-75B6DD04DF38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atata.Bootstrap.Tests", "Atata.Bootstrap.Tests\Atata.Bootstrap.Tests.csproj", "{82FB2B18-B760-4DC2-B66C-B2FAC48BC6A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +28,14 @@ Global
 		{AD6D1F54-007E-4C7D-8A2B-4A176CF00484}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD6D1F54-007E-4C7D-8A2B-4A176CF00484}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD6D1F54-007E-4C7D-8A2B-4A176CF00484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB08E10A-6381-4B3E-8917-75B6DD04DF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB08E10A-6381-4B3E-8917-75B6DD04DF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB08E10A-6381-4B3E-8917-75B6DD04DF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB08E10A-6381-4B3E-8917-75B6DD04DF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82FB2B18-B760-4DC2-B66C-B2FAC48BC6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82FB2B18-B760-4DC2-B66C-B2FAC48BC6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82FB2B18-B760-4DC2-B66C-B2FAC48BC6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82FB2B18-B760-4DC2-B66C-B2FAC48BC6A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
