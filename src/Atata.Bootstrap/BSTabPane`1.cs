@@ -1,9 +1,10 @@
 ﻿namespace Atata.Bootstrap
 {
-    [ControlDefinition("div", ContainingClass = "tab-pane", ComponentTypeName = "tab pane", IgnoreNameEndings = "Tab,TabPane,TabPanel", Visibility = Visibility.Any)]
+    [ControlDefinition("div", ContainingClass = "tab-pane", ComponentTypeName = "tab pane", Visibility = Visibility.Any)]
+    [ControlFinding(FindTermBy.Id)]
     [BSClickTab(AppliesTo = TriggerScope.Children)]
-    public class BSTabPane<_> : Control<_>
-        where _ : PageObject<_>
+    public class BSTabPane<TOwner> : Control<TOwner>
+        where TOwner : PageObject<TOwner>
     {
     }
 }

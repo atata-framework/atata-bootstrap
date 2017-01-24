@@ -63,10 +63,13 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="BSClickTabAttribute.cs" />
+    <Compile Include="BSPillPane`1.cs" />
+    <Compile Include="Triggers\BSClickPillAttribute.cs" />
+    <Compile Include="Triggers\BSClickTabAttribute.cs" />
     <Compile Include="BSDropdown`1.cs" />
     <Compile Include="BSModal`1.cs" />
     <Compile Include="BSNavbar`1.cs" />
+    <Compile Include="BSPill`1.cs" />
     <Compile Include="BSTabPane`1.cs" />
     <Compile Include="BSTab`1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
