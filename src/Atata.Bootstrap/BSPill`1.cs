@@ -5,7 +5,7 @@
         where TOwner : PageObject<TOwner>
     {
         public DataProvider<bool, TOwner> IsActive => GetOrCreateDataProvider(
-            nameof(IsActive).ToString(TermCase.Title),
+            nameof(IsActive).ToString(TermCase.MidSentence),
             () => Scope.HasClass("active"));
     }
 }
