@@ -23,7 +23,7 @@ namespace Atata.Bootstrap
             string tabPillInnerXPath = $".//a[@href='#{tabPane.Attributes.Id.Value}']";
             string pillXPath = UIComponentResolver.GetControlDefinition(typeof(BSPill<TOwner>)).ScopeXPath;
 
-            bool isUsingPill = tabPane.Parent.Scope.Exists(By.XPath($"{pillXPath}[{tabPillInnerXPath}]").SafelyAtOnce());
+            bool isUsingPill = tabPane.Parent.Scope.Exists(By.XPath($".//{pillXPath}[{tabPillInnerXPath}]").SafelyAtOnce());
 
             var findAttribute = new FindByInnerXPathAttribute(tabPillInnerXPath);
 
