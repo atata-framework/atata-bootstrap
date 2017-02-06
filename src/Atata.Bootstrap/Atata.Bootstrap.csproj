@@ -63,6 +63,7 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="BSNavItem`1.cs" />
     <Compile Include="BSPillPane`1.cs" />
     <Compile Include="Triggers\BSClickPillAttribute.cs" />
     <Compile Include="Triggers\BSClickTabAttribute.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="BSTabPane`1.cs" />
     <Compile Include="BSTab`1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Triggers\ClickTabOrPillAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
