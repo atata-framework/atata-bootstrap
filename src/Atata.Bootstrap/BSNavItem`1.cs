@@ -1,4 +1,6 @@
-﻿namespace Atata.Bootstrap
+﻿using System.Linq;
+
+namespace Atata.Bootstrap
 {
     [ControlDefinition("li", ComponentTypeName = "nav item")]
     public class BSNavItem<TOwner> : Control<TOwner>
@@ -6,6 +8,6 @@
     {
         public DataProvider<bool, TOwner> IsActive => GetOrCreateDataProvider(
             nameof(IsActive).ToString(TermCase.MidSentence),
-            () => Scope.HasClass("active"));
+            () => Attributes.Class.Value.Contains("active"));
     }
 }
