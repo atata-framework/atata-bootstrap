@@ -68,7 +68,7 @@
     </Compile>
     <Compile Include="AtataSettings.cs" />
     <Compile Include="AutoTest.cs" />
-    <Compile Include="BSPillTest.cs" />
+    <Compile Include="BSNavTest.cs" />
     <Compile Include="Components\PillsPage.cs" />
     <Compile Include="NUnitSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,7 +12,16 @@ namespace Atata.Bootstrap.Tests
 
         public PillPane3 Pane3 { get; private set; }
 
-        public class PillPane1 : BSPillPane<_>
+        public BSPill<_> Menu1 { get; private set; }
+
+        public BSPill<_> Menu2 { get; private set; }
+
+        public BSPill<_> Menu3 { get; private set; }
+
+        [FindByClass("active")]
+        public BSPill<_> ActiveMenu { get; private set; }
+
+        public class PillPane1 : BSTabPane<_>
         {
             public H3<_> Header { get; private set; }
 
@@ -23,7 +32,7 @@ namespace Atata.Bootstrap.Tests
             public TextInput<_> TextInput { get; private set; }
         }
 
-        public class PillPane2 : BSPillPane<_>
+        public class PillPane2 : BSTabPane<_>
         {
             public H3<_> Header { get; private set; }
 
@@ -34,7 +43,7 @@ namespace Atata.Bootstrap.Tests
             public CheckBox<_> CheckBox { get; private set; }
         }
 
-        public class PillPane3 : BSPillPane<_>
+        public class PillPane3 : BSTabPane<_>
         {
             public H3<_> Header { get; private set; }
 
