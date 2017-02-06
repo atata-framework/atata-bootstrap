@@ -1,10 +1,10 @@
-﻿using _ = Atata.Bootstrap.Tests.PillsPage;
+﻿using _ = Atata.Bootstrap.Tests.TabsPage;
 
 namespace Atata.Bootstrap.Tests
 {
-    [Url("Pills.html")]
+    [Url("Tabs.html")]
     [TermFindSettings(FindTermBy.Id, Case = TermCase.LowerMerged)]
-    public class PillsPage : Page<_>
+    public class TabsPage : Page<_>
     {
         public TabPane1 Pane1 { get; private set; }
 
@@ -12,14 +12,14 @@ namespace Atata.Bootstrap.Tests
 
         public TabPane3 Pane3 { get; private set; }
 
-        public BSPill<_> Menu1 { get; private set; }
+        public BSTab<_> Menu1 { get; private set; }
 
-        public BSPill<_> Menu2 { get; private set; }
+        public BSTab<_> Menu2 { get; private set; }
 
-        public BSPill<_> Menu3 { get; private set; }
+        public BSTab<_> Menu3 { get; private set; }
 
         [FindByClass("active")]
-        public BSPill<_> ActiveMenu { get; private set; }
+        public BSTab<_> ActiveMenu { get; private set; }
 
         public class TabPane1 : BSTabPane<_>
         {
