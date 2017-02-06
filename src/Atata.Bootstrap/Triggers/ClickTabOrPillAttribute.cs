@@ -27,9 +27,11 @@ namespace Atata.Bootstrap
 
             var findAttribute = new FindByInnerXPathAttribute(tabPillInnerXPath);
 
+            string navItemName = tabPane.ComponentName;
+
             navItemComponent = isUsingPill
-                ? (UIComponent)tabPane.Parent.Controls.Create<BSPill<TOwner>>(context.Component.Parent.ComponentName, findAttribute)
-                : tabPane.Parent.Controls.Create<BSTab<TOwner>>(context.Component.Parent.ComponentName, findAttribute);
+                ? (UIComponent)tabPane.Parent.Controls.Create<BSPill<TOwner>>(navItemName, findAttribute)
+                : tabPane.Parent.Controls.Create<BSTab<TOwner>>(navItemName, findAttribute);
 
             isInitialized = true;
         }
