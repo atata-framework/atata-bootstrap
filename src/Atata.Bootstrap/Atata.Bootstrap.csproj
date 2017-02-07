@@ -64,9 +64,6 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="BSNavItem`1.cs" />
-    <Compile Include="BSPillPane`1.cs" />
-    <Compile Include="Triggers\BSClickPillAttribute.cs" />
-    <Compile Include="Triggers\BSClickTabAttribute.cs" />
     <Compile Include="BSDropdown`1.cs" />
     <Compile Include="BSModal`1.cs" />
     <Compile Include="BSNavbar`1.cs" />
