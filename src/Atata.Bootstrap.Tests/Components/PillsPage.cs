@@ -18,6 +18,8 @@ namespace Atata.Bootstrap.Tests
 
         public BSPill<_> Menu3 { get; private set; }
 
+        public BSPill<_> Menu4 { get; private set; }
+
         [FindByClass("active")]
         public BSPill<_> ActiveMenu { get; private set; }
 

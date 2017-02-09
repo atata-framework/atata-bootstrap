@@ -33,7 +33,11 @@ namespace Atata.Bootstrap.Tests
                 Menu3.Click().
                 Menu2.IsActive.Should.BeFalse().
                 Menu3.IsActive.Should.BeTrue().
-                ActiveMenu.Content.Should.Equal("Menu 3");
+                ActiveMenu.Content.Should.Equal("Menu 3").
+
+                Menu1.Should.BeEnabled().
+                Menu3.Should.BeEnabled().
+                Menu4.Should.BeDisabled();
         }
 
         [Test]
@@ -65,7 +69,11 @@ namespace Atata.Bootstrap.Tests
                 Menu3.Click().
                 Menu2.IsActive.Should.BeFalse().
                 Menu3.IsActive.Should.BeTrue().
-                ActiveMenu.Content.Should.Equal("Menu 3");
+                ActiveMenu.Content.Should.Equal("Menu 3").
+
+                Menu1.Should.BeEnabled().
+                Menu3.Should.BeEnabled().
+                Menu4.Should.BeDisabled();
         }
     }
 }

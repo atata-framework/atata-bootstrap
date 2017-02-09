@@ -18,6 +18,8 @@ namespace Atata.Bootstrap.Tests
 
         public BSTab<_> Menu3 { get; private set; }
 
+        public BSTab<_> Menu4 { get; private set; }
+
         [FindByClass("active")]
         public BSTab<_> ActiveMenu { get; private set; }
 
