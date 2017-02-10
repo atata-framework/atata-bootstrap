@@ -68,6 +68,7 @@
     <Compile Include="BSDropdown`1.cs" />
     <Compile Include="BSModal`1.cs" />
     <Compile Include="BSNavbar`1.cs" />
+    <Compile Include="BSNavItem`2.cs" />
     <Compile Include="BSPill`1.cs" />
     <Compile Include="BSTabPane`1.cs" />
     <Compile Include="BSTab`1.cs" />

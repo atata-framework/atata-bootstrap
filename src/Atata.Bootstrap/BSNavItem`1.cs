@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 namespace Atata.Bootstrap
 {
     [ControlDefinition("li", ComponentTypeName = "nav item")]
+    [ControlFinding(FindTermBy.Content)]
     public class BSNavItem<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
