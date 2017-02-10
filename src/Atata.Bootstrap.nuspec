@@ -3,22 +3,23 @@
   <metadata>
     <id>Atata.Bootstrap</id>
     <title>Atata.Bootstrap</title>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
     <authors>Yevgeniy Shunevych</authors>
     <owners>Yevgeniy Shunevych</owners>
     <licenseUrl>https://raw.githubusercontent.com/atata-framework/atata-bootstrap/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/atata-framework/atata-bootstrap</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/atata-framework/atata/master/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>A set of Atata components for Bootstrap Framework.</summary>
-    <description>A set of Atata components for Bootstrap Framework.</description>
+    <summary>.NET package containing a set of Atata components for the automation testing integration with Bootstrap Framework.</summary>
+    <description>.NET package containing a set of Atata components for the automation testing integration with Bootstrap Framework.</description>
     <releaseNotes>
+0.4.0 - https://github.com/atata-framework/atata-bootstrap/releases/tag/v0.4.0
 0.3.0 - Initial release.
     </releaseNotes>
-    <copyright>Copyright © Yevgeniy Shunevych 2016</copyright>
+    <copyright>Copyright © Yevgeniy Shunevych 2017</copyright>
     <tags>atata automation testing test selenium webdriver browser bootstrap</tags>
     <dependencies>
-      <dependency id="Atata" version="0.11.0" />
+      <dependency id="Atata" version="0.11.3" />
       <dependency id="Atata.WebDriverExtras" version="0.11.0" />
       <dependency id="Selenium.WebDriver" version="3.0.1" />
       <dependency id="Selenium.Support" version="3.0.1" />
