@@ -1,50 +1,53 @@
 ﻿using System;
+using System.Linq;
 using OpenQA.Selenium;
 
 namespace Atata.Bootstrap
 {
     public class ClickTabOrPillAttribute : TriggerAttribute
     {
-        private bool isInitialized;
-        private UIComponent navItemComponent;
-
         public ClickTabOrPillAttribute(TriggerEvents on = TriggerEvents.BeforeAccess, TriggerPriority priority = TriggerPriority.Medium)
             : base(on, priority)
         {
         }
 
-        private void Init<TOwner>(TriggerContext<TOwner> context)
+        protected override void Execute<TOwner>(TriggerContext<TOwner> context)
+        {
+            BSNavItem<TOwner> navItem = GetNavItem(context);
+
+            if (!navItem.IsActive)
+                navItem.Click();
+        }
+
+        private BSNavItem<TOwner> GetNavItem<TOwner>(TriggerContext<TOwner> context)
             where TOwner : PageObject<TOwner>
         {
             var tabPane = context.Component.GetAncestorOrSelf<BSTabPane<TOwner>>() as IUIComponent<TOwner>;
             if (tabPane == null)
                 throw new InvalidOperationException($"Cannot find '{nameof(BSTabPane<TOwner>)}' ancestor.");
 
-            string tabPillInnerXPath = $".//a[@href='#{tabPane.Attributes.Id.Value}']";
-            string pillXPath = UIComponentResolver.GetControlDefinition(typeof(BSPill<TOwner>)).ScopeXPath;
-
-            bool isUsingPill = tabPane.Parent.Scope.Exists(By.XPath($".//{pillXPath}[{tabPillInnerXPath}]").SafelyAtOnce());
-
-            var findAttribute = new FindByInnerXPathAttribute(tabPillInnerXPath);
-
             string navItemName = tabPane.ComponentName;
 
-            navItemComponent = isUsingPill
-                ? (UIComponent)tabPane.Parent.Controls.Create<BSPill<TOwner>>(navItemName, findAttribute)
-                : tabPane.Parent.Controls.Create<BSTab<TOwner>>(navItemName, findAttribute);
+            BSNavItem<TOwner> navItem = tabPane.Parent.Controls.
+                OfType<IUIComponent<TOwner>>().
+                FirstOrDefault(x => x.ComponentName == navItemName && (x is BSPill<TOwner> || x is BSTab<TOwner>))
+                as BSNavItem<TOwner>;
 
-            isInitialized = true;
-        }
+            if (navItem == null)
+            {
+                string tabPillInnerXPath = $".//a[@href='#{tabPane.Attributes.Id.Value}']";
+                string pillXPath = UIComponentResolver.GetControlDefinition(typeof(BSPill<TOwner>)).ScopeXPath;
 
-        protected override void Execute<TOwner>(TriggerContext<TOwner> context)
-        {
-            if (!isInitialized)
-                Init(context);
+                bool isUsingPill = tabPane.Parent.Scope.Exists(By.XPath($".//{pillXPath}[{tabPillInnerXPath}]").SafelyAtOnce());
 
-            BSNavItem<TOwner> navItem = (BSNavItem<TOwner>)navItemComponent;
+                var findAttribute = new FindByInnerXPathAttribute(tabPillInnerXPath);
 
-            if (!navItem.IsActive)
-                navItem.Click();
+                navItem = isUsingPill
+                    ? (BSNavItem<TOwner>)tabPane.Parent.Controls.Create<BSPill<TOwner>>(navItemName, findAttribute)
+                    : tabPane.Parent.Controls.Create<BSTab<TOwner>>(navItemName, findAttribute);
+            }
+
+            return navItem;
         }
     }
 }
