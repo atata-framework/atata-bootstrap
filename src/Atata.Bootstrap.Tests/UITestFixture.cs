@@ -4,10 +4,10 @@ using NUnit.Framework;
 namespace Atata.Bootstrap.Tests
 {
     [TestFixture]
-    public abstract class AutoTest
+    public abstract class UITestFixture
     {
         [SetUp]
-        public void SetUp()
+        public virtual void SetUp()
         {
             string baseUrl = ConfigurationManager.AppSettings["TestAppUrl"];
 
@@ -20,16 +20,10 @@ namespace Atata.Bootstrap.Tests
                     WithMinLevel(LogLevel.Info).
                 LogNUnitError().
                 SetUp();
-
-            OnSetUp();
-        }
-
-        protected virtual void OnSetUp()
-        {
         }
 
         [TearDown]
-        public void TearDown()
+        public virtual void TearDown()
         {
             AtataContext.Current.CleanUp();
         }

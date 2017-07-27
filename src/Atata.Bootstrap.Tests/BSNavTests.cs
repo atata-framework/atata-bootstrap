@@ -2,7 +2,7 @@
 
 namespace Atata.Bootstrap.Tests
 {
-    public class BSNavTest : AutoTest
+    public class BSNavTests : UITestFixture
     {
         [Test]
         public void BSTabPane_Pills()
