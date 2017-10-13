@@ -11,15 +11,16 @@ namespace Atata.Bootstrap.Tests
         {
             string baseUrl = ConfigurationManager.AppSettings["TestAppUrl"];
 
-            AtataContext.Build().
+            AtataContext.Configure().
                 UseChrome().
                     WithArguments("disable-extensions", "no-sandbox", "start-maximized").
                 UseBaseUrl(baseUrl).
+                UseCulture("en-us").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().
                     WithMinLevel(LogLevel.Info).
                 LogNUnitError().
-                SetUp();
+                Build();
         }
 
         [TearDown]
