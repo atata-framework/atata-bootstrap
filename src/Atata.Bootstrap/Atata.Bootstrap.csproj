@@ -6,7 +6,7 @@
     <Authors>Yevgeniy Shunevych</Authors>
     <Company>Yevgeniy Shunevych</Company>
     <Product>Atata Framework</Product>
-    <Description>.NET package containing a set of Atata components for automated web testing integration with Bootstrap Framework.</Description>
+    <Description>C#/.NET package containing a set of Atata components for automated web testing integration with Bootstrap Framework.</Description>
     <Copyright>© Yevgeniy Shunevych 2017</Copyright>
     <PackageLicenseUrl>https://raw.githubusercontent.com/atata-framework/atata-bootstrap/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/atata-framework/atata-bootstrap</PackageProjectUrl>

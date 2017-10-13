@@ -3,7 +3,9 @@
 [![NuGet](http://img.shields.io/nuget/v/Atata.Bootstrap.svg)](https://www.nuget.org/packages/Atata.Bootstrap/)
 [![Gitter](https://badges.gitter.im/atata-framework/atata-bootstrap.svg)](https://gitter.im/atata-framework/atata-bootstrap)
 
-C#/.NET package containing a set of [Atata](https://github.com/atata-framework/atata) components for the automation testing integration with [Bootstrap Framework](http://getbootstrap.com/).
+C#/.NET package containing a set of [Atata](https://github.com/atata-framework/atata) components for automated web testing integration with [Bootstrap Framework](http://getbootstrap.com/).
+
+Supports .NET Framework 4.0+ and .NET Core/Standard 2.0.
 
 Namespace is `Atata.Bootstrap`.
 
