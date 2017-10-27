@@ -45,11 +45,12 @@ namespace Atata.Bootstrap.Tests
         {
             Go.To<TabsPage>().
                 Pane1.TextInput.Set("abc").
+                Pane1.TextInput.Set("def").
                 Pane2.Header.Should.Equal("Menu 2").
                 Pane2.CheckBox.Check().
                 Pane3.Text.Should.Contain("Eaque ipsa").
                 Pane2.CheckBox.Should.BeChecked().
-                Pane1.TextInput.Should.Equal("abc").
+                Pane1.TextInput.Should.Equal("def").
                 Pane2.Content.Should.Contain("Sed ut perspiciatis");
         }
 
@@ -74,6 +75,17 @@ namespace Atata.Bootstrap.Tests
                 Menu1.Should.BeEnabled().
                 Menu3.Should.BeEnabled().
                 Menu4.Should.BeDisabled();
+        }
+
+
+        [Test]
+        public void BSAccordion()
+        {
+            Go.To<AccordionsPage>().
+                Menu1.RightClick().
+                Menu1.DoubleClick().
+                Menu2.RightClick();
+
         }
     }
 }
