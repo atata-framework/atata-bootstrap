@@ -6,11 +6,9 @@ namespace Atata.Bootstrap.Tests
     [TermFindSettings(FindTermBy.Id, Case = TermCase.LowerMerged)]
     public class AccordionsPage : Page<_>
     {
-        public TabPane1 Pane1 { get; private set; }
+        public H1<_> Header { get; set; }
 
-        public TabPane2 Pane2 { get; private set; }
-
-        public TabPane3 Pane3 { get; private set; }
+        public Text<_> Content { get; set; }
 
         public BSAccordion<_> Menu1 { get; private set; }
 
@@ -20,12 +18,19 @@ namespace Atata.Bootstrap.Tests
 
         public BSAccordion<_> Menu4 { get; private set; }
 
+
+        public ControlList<AccordionItem, _> AccordionItems { get; private set; }
+
         [FindByClass("active")]
         public BSPill<_> ActiveMenu { get; private set; }
 
-        public class TabPane1 : BSTabPane<_>
+        [ControlDefinition("div", ContainingClass = "panel-heading", ComponentTypeName = "accordion item")]
+        public class AccordionItem : Control<_>
         {
-            public H3<_> Header { get; private set; }
+            public H4<_> Header { get; private set; }
+
+            [ControlDefinition("a", ContainingClass = "collapsed", ComponentTypeName = "accordion item")]
+            public Control<_> ATag { get; private set; }
 
             [FindByXPath("p")]
             public Text<_> Text { get; private set; }
