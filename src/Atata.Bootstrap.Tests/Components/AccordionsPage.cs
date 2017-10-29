@@ -8,15 +8,17 @@ namespace Atata.Bootstrap.Tests
     {
         public H1<_> Header { get; set; }
 
-        public new Text<_> Content { get; set; }
+        [FindById]
+        public Text<_> Description { get; set; }
 
         public Link<_> Menu1 { get; set; }
         public Link<_> Menu2 { get; set; }
         public Link<_> Menu3 { get; set; }
 
-        public ControlList<AccordionItem, _> AccordionItems { get; private set; }
+        [FindById]
+        public ControlList<AccordionItem, _> Accordion { get; private set; }
 
-        [ControlDefinition("div", ContainingClass = "panel-heading")]
+        [ControlDefinition("div", ContainingClass = "panel-default")]
         public class AccordionItem : Control<_>
         {
             public H4<_> Header { get; private set; }
