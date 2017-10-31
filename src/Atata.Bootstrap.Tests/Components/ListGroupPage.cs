@@ -8,29 +8,34 @@
         public H1<_> Header { get; set; }
 
         public OrderedList<ListItem<_>, _> OrderedList { get; private set; }
-
         public UnorderedList<ListItem<_>, _> UnorderedList { get; private set; }
 
-        [FindById]
-        public ControlList<UnOrderedListItem, _> ControlList { get; private set; }
+        public BSListGroupItem<_> ListGroupItem { get; private set; }
+        public BSListGroup<ListItem<_>, _> ListGroup { get; private set; }
+
+        public ControlList<BSListGroupItem<_>, _> ListGroupItems { get; private set; }
+        public ControlList<BSListGroup<ListItem<_>, _>, _> ListGroups { get; private set; }
+
+        [FindByAttribute("href", new string[] { "#" })]
+        public BSListGroupItem<_> ListGroupItemWithHref { get; private set; }
+
+        [FindByClass("list-group-item active")]
+        public BSListGroupItem<_> ListGroupItemWithActive { get; private set; }
 
         [FindById("badges")]
         public OrderedList<ListItem<_>, _> BadgesOrderedList { get; private set; }
 
-        [FindById("linked-items")]
-        public OrderedList<ListItem<_>, _> LinkedItemsListGroup { get; private set; }
-
-        [FindById]
-        public Text<_> Description { get; set; }
-
-        public Link<_> Menu1 { get; set; }
-        public Link<_> Menu2 { get; set; }
-        public Link<_> Menu3 { get; set; }
-
-        [ControlDefinition("div", ContainingClass = "ulbasic")]
         public class UnOrderedListItem : Control<_>
         {
             public H5<_> Header { get; private set; }
+        }
+
+        public class BSListGroupItem : Control<_>
+        {
+        }
+
+        public class BSListGroup : Control<_>
+        {
         }
     }
 }
