@@ -1,7 +1,7 @@
-﻿using _ = Atata.Bootstrap.Tests.AccordionsPage;
-
-namespace Atata.Bootstrap.Tests
+﻿namespace Atata.Bootstrap.Tests
 {
+    using _ = AccordionsPage;
+
     [Url("Accordions.html")]
     [TermFindSettings(FindTermBy.Id, Case = TermCase.LowerMerged)]
     public class AccordionsPage : Page<_>
@@ -26,6 +26,5 @@ namespace Atata.Bootstrap.Tests
             [ControlDefinition("a", ContainingClass = "collapsed")]
             public Control<_> ATag { get; private set; }
         }
-
     }
 }

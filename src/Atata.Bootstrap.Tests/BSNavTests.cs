@@ -50,7 +50,7 @@ namespace Atata.Bootstrap.Tests
                 Pane2.CheckBox.Check().
                 Pane3.Text.Should.Contain("Eaque ipsa").
                 Pane2.CheckBox.Should.BeChecked().
-                Pane1.TextInput.Should.Equal("def").
+                Pane1.TextInput.Should.Equal("abc").
                 Pane2.Content.Should.Contain("Sed ut perspiciatis");
         }
 
