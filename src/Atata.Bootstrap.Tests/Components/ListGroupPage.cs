@@ -25,6 +25,9 @@
         [FindById("badges")]
         public OrderedList<ListItem<_>, _> BadgesOrderedList { get; private set; }
 
+        [FindByXPath("h4[@class='list-group-item-heading']", Index =0)]
+        public Control<_> CustomContentByXPath { get; set; }
+
         public class UnOrderedListItem : Control<_>
         {
             public H5<_> Header { get; private set; }

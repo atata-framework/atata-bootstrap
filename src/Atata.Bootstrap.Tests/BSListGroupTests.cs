@@ -21,7 +21,9 @@ namespace Atata.Bootstrap.Tests
             ListGroups.Count.Should.Equal(10).
 
             ListGroupItemWithHref.RightClick().
-            ListGroupItemWithActive.Content.Should.Equal("Cras justo odio");
+            ListGroupItemWithActive.Content.Should.Equal("Cras justo odio").
+
+            CustomContentByXPath.Content.Should.Equal("List group item heading");
         }
     }
 }
