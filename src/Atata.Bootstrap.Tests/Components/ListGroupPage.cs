@@ -25,8 +25,14 @@
         [FindById("badges")]
         public OrderedList<ListItem<_>, _> BadgesOrderedList { get; private set; }
 
-        [FindByXPath("h4[@class='list-group-item-heading']", Index =0)]
-        public Control<_> CustomContentByXPath { get; set; }
+        [FindByXPath("div[@class='panel-group']/div[@class='panel panel-default'][7]/div[@class='list-group'][1]/a[@class='list-group-item active']/h4[@class='list-group-item-heading']")]
+        public H4<_> ListGroupItem2ndWithActive { get; private set; }
+
+        [FindByXPath("div[@class='list-group']/a[@class='list-group-item disabled']")]
+        public BSListGroupItem<_> IsDisabledItem { get; set; }
+
+        [FindByXPath("div[@class='panel-group']/div[@class='panel panel-default'][7]/div[@class='list-group'][1]/a[@class='list-group-item active']")]
+        public BSListGroupItem<_> IsActiveItem { get; set; }
 
         public class UnOrderedListItem : Control<_>
         {

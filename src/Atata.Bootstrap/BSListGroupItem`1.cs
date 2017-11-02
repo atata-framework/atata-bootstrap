@@ -13,5 +13,12 @@ namespace Atata.Bootstrap
     public class BSListGroupItem<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
+        public DataProvider<bool, TOwner> IsActive => GetOrCreateDataProvider(nameof(IsActive).ToString(TermCase.MidSentence), () => Attributes.Class.Value.Contains(BSClass.Active));
+
+        // Overrides GetIsEnables() from Atata.Control<TOwner>.GetIsEnabled() to change the default hahavior of this method.
+        protected override bool GetIsEnabled()
+        {
+            return !Scope.HasClass(BSClass.Disabled);
+        }
     }
 }
