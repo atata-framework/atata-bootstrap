@@ -15,7 +15,10 @@ namespace Atata.Bootstrap
     {
         public DataProvider<bool, TOwner> IsActive => GetOrCreateDataProvider(nameof(IsActive).ToString(TermCase.MidSentence), () => Attributes.Class.Value.Contains(BSClass.Active));
 
-        // Overrides GetIsEnables() from Atata.Control<TOwner>.GetIsEnabled() to change the default hahavior of this method.
+        public new DataProvider<bool, TOwner> IsEnabled => GetOrCreateDataProvider("enabled", GetIsEnabled);
+
+        // Overrides GetIsEnables() from Atata.Control<TOwner>.GetIsEnabled() to change the default behavior of this method.
+        // If the class attribute has 'disabled' value, this method returns 'false' in inspecting this element.
         protected override bool GetIsEnabled()
         {
             return !Scope.HasClass(BSClass.Disabled);
