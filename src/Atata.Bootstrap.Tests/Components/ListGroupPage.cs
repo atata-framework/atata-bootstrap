@@ -7,8 +7,7 @@
     {
         public H1<_> Header { get; set; }
 
-        public OrderedList<ListItem<_>, _> OrderedList { get; private set; }
-        public UnorderedList<ListItem<_>, _> UnorderedList { get; private set; }
+        public OrderedList<BadgesListItems, _> BadgesListItemsInOL { get; set; }
 
         public BSListGroupItem<_> ListGroupItem { get; private set; }
         public BSListGroup<ListItem<_>, _> ListGroup { get; private set; }
@@ -22,9 +21,6 @@
         [FindByClass("list-group-item active")]
         public BSListGroupItem<_> ListGroupItemWithActive { get; private set; }
 
-        [FindById("badges")]
-        public OrderedList<ListItem<_>, _> BadgesOrderedList { get; private set; }
-
         [FindByXPath("div[@class='panel-group']/div[@class='panel panel-default'][7]/div[@class='list-group'][1]/a[@class='list-group-item active']/h4[@class='list-group-item-heading']")]
         public H4<_> ListGroupItem2ndWithActive { get; private set; }
 
@@ -33,6 +29,14 @@
 
         [FindByXPath("div[@class='panel-group']/div[@class='panel panel-default'][7]/div[@class='list-group'][1]/a[@class='list-group-item active']")]
         public BSListGroupItem<_> IsActiveItem { get; set; }
+
+        public class BadgesListItems : ListItem<_>
+        {
+            [FindByClass("badge")]
+            public Number<_> Number { get; set; }
+
+            public Text<_> InnerContent { get; set; }
+        }
 
         public class UnOrderedListItem : Control<_>
         {

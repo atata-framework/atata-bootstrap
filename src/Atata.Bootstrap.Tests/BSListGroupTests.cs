@@ -12,13 +12,11 @@ namespace Atata.Bootstrap.Tests
 
             Header.Should.Equal("Verify a specific page that you need in List-group Bootstrap").
 
-            UnorderedList.Items.Count.Should.Equal(5).
-            OrderedList.Items.Count.Should.Equal(3).
-
-            BadgesOrderedList.Items.Count.Should.Equal(3).
-
             ListGroupItems.Count.Should.Equal(34).
             ListGroups.Count.Should.Equal(10).
+
+            BadgesListItemsInOL.Items.Count.Should.Equal(3).
+            BadgesListItemsInOL.Items[x => x.Number == 2].InnerContent.Should.Contain("Dapibus ac facilisis in").
 
             ListGroupItemWithHref.RightClick().
 
