@@ -9,9 +9,6 @@
 
         public OrderedList<BadgesListItems, _> BadgesListItemsInOL { get; set; }
 
-        public BSListGroupItem<_> ListGroupItem { get; private set; }
-        public BSListGroup<ListItem<_>, _> ListGroup { get; private set; }
-
         public ControlList<BSListGroupItem<_>, _> ListGroupItems { get; private set; }
         public ControlList<BSListGroup<ListItem<_>, _>, _> ListGroups { get; private set; }
 
