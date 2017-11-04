@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Atata.Bootstrap
 {
-    [ControlDefinition("a", ContainingClass = "collapsed", ComponentTypeName = "accordion", Visibility = Visibility.Any)]
+    // [ControlDefinition("a[@data-toggle='collapse' AND @data-parent='#accordion']", ComponentTypeName = "collapse with accordion")]
+    [ControlDefinition("a[@data-parent='#accordion']", ComponentTypeName = "collapse with accordion")]
     public class BSAccordion<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
