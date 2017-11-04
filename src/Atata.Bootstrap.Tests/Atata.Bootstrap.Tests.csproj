@@ -65,8 +65,12 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AtataSettings.cs" />
+    <Compile Include="BSCollapseWithButtonTests.cs" />
+    <Compile Include="BSCollapseWithHrefTests.cs" />
     <Compile Include="BSListGroupTests.cs" />
     <Compile Include="BSAccordionTests.cs" />
+    <Compile Include="Components\CollapseWithButtonPage.cs" />
+    <Compile Include="Components\CollapseWithHrefPage.cs" />
     <Compile Include="Components\ListGroupPage.cs" />
     <Compile Include="Components\AccordionsPage.cs" />
     <Compile Include="UITestFixture.cs" />

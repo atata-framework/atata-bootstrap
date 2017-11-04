@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CollapseWithButton.html" />
+    <Content Include="CollapseWithHref.html" />
     <Content Include="ListGroups.html" />
     <Content Include="package.json" />
     <None Include="packages.config">
