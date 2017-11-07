@@ -66,10 +66,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Carousel.html" />
-    <Content Include="CollapseWithButton.html" />
-    <Content Include="CollapseWithHref.html" />
-    <Content Include="Images\blue.jpg" />
     <Content Include="ListGroups.html" />
     <Content Include="package.json" />
     <None Include="packages.config">
@@ -83,7 +79,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Accordions.html" />
     <Content Include="Tabs.html" />
     <Content Include="Pills.html" />
     <Content Include="Web.config">
