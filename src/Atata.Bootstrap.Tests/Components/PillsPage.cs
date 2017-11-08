@@ -1,7 +1,7 @@
-﻿using _ = Atata.Bootstrap.Tests.PillsPage;
-
-namespace Atata.Bootstrap.Tests
+﻿namespace Atata.Bootstrap.Tests
 {
+    using _ = PillsPage;
+
     [Url("Pills.html")]
     [TermFindSettings(FindTermBy.Id, Case = TermCase.LowerMerged)]
     public class PillsPage : Page<_>

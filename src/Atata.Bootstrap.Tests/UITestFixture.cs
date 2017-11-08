@@ -13,12 +13,11 @@ namespace Atata.Bootstrap.Tests
 
             AtataContext.Configure().
                 UseChrome().
-                    WithArguments("disable-extensions", "no-sandbox", "start-maximized").
+                    WithArguments("start-maximized").
                 UseBaseUrl(baseUrl).
                 UseCulture("en-us").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().
-                    WithMinLevel(LogLevel.Info).
                 LogNUnitError().
                 Build();
         }

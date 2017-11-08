@@ -1,7 +1,7 @@
-﻿using _ = Atata.Bootstrap.Tests.TabsPage;
-
-namespace Atata.Bootstrap.Tests
+﻿namespace Atata.Bootstrap.Tests
 {
+    using _ = TabsPage;
+
     [Url("Tabs.html")]
     [TermFindSettings(FindTermBy.Id, Case = TermCase.LowerMerged)]
     public class TabsPage : Page<_>
