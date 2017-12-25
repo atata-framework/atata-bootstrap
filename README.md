@@ -21,6 +21,8 @@ Namespace is `Atata.Bootstrap`.
 - `BSTab`
 - `BSPill`
 - `BSTabPane`
+- `BSListGroup`
+- `BSListGroupItem`
 
 ## Triggers
 
