@@ -3,7 +3,7 @@
 namespace Atata.Bootstrap
 {
     /// <summary>
-    /// Represents the Bootstrap dropdown toggle control (element with "dropdown-toggle" class).
+    /// Represents Bootstrap dropdown toggle control (element with "dropdown-toggle" class).
     /// Default search is performed by the content.
     /// </summary>
     /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
