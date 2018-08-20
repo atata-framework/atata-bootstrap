@@ -6,17 +6,20 @@
 [![Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata-framework.github.io/)
 [![Twitter](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://twitter.com/AtataFramework)
 
-C#/.NET package containing a set of [Atata](https://github.com/atata-framework/atata) components for automated web testing integration with [Bootstrap Framework](http://getbootstrap.com/).
+C#/.NET package containing a set of [Atata](https://github.com/atata-framework/atata) components for automated web testing integration with [Bootstrap Framework](https://getbootstrap.com/).
 
-Supports .NET Framework 4.0+ and .NET Core/Standard 2.0.
+Works with Bootstrap components of version 3.3 and 4.0+.
 
-Namespace is `Atata.Bootstrap`.
+Supports .NET Framework 4.0+ and .NET Core/Standard 2.0+.
 
 ## Components
+
+Namespace is `Atata.Bootstrap`.
 
 - `BSModal`
 - `BSNavbar`
 - `BSDropdown`
+- `BSDropdownToggle`
 - `BSNavItem`
 - `BSTab`
 - `BSPill`
@@ -39,4 +42,5 @@ Feel free to clone/fork it and check out the usage of Bootstrap components.
 
 ## License
 
-Atata is an open source software, licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+Atata is an open source software, licensed under the Apache License 2.0.
+See [LICENSE](LICENSE) for details.
