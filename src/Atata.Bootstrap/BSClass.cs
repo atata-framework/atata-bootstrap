@@ -11,5 +11,7 @@
         public const string ListGroup = "list-group";
 
         public const string ListGroupItem = "list-group-item";
+
+        public const string DropdownToggle = "dropdown-toggle";
     }
 }

@@ -63,7 +63,9 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="DropdownToggleTests.cs" />
     <Compile Include="BSListGroupTests.cs" />
+    <Compile Include="Components\DropdownTogglePage.cs" />
     <Compile Include="Components\ListGroupPage.cs" />
     <Compile Include="UITestFixture.cs" />
     <Compile Include="BSNavTests.cs" />

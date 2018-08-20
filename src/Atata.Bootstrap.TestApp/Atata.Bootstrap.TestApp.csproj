@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dropdown.html" />
     <Content Include="ListGroup.html" />
     <Content Include="package.json" />
     <None Include="packages.config">
