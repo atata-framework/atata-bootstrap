@@ -9,14 +9,30 @@ namespace Atata.Bootstrap
     /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
     [ControlDefinition(ContainingClass = BSClass.DropdownToggle, ComponentTypeName = "dropdown toggle", IgnoreNameEndings = "DropdownButton,DropDownButton,Dropdown,DropDown,Button,DropdownToggle,DropDownToggle,Toggle")]
     [ControlFinding(FindTermBy.Content)]
-    [ClickParent(AppliesTo = TriggerScope.Children)]
     [FindSettings(OuterXPath = "following-sibling::*[1]//")]
+    [InvokeMethod(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, AppliesTo = TriggerScope.Children)]
+    [InvokeMethod(nameof(OnInit), TriggerEvents.Init)]
     public class BSDropdownToggle<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
+        [FindByClass("dropdown-menu", OuterXPath = "following-sibling::", Visibility = Visibility.Any)]
+        [TraceLog]
+        protected Control<TOwner> DropdownMenu { get; private set; }
+
+        protected void OnInit()
+        {
+            DropdownMenu.Triggers.RemoveAll(x => x is InvokeMethodAttribute);
+        }
+
         protected override bool GetIsEnabled()
         {
             return !Attributes.Class.Value.Contains(BSClass.Disabled);
+        }
+
+        protected void OnBeforeAccessChild()
+        {
+            if (!DropdownMenu.IsVisible)
+                Click();
         }
     }
 }
