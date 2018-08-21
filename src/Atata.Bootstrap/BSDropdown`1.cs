@@ -7,18 +7,29 @@
     /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
     [ControlDefinition(ContainingClass = BSClass.Dropdown, ComponentTypeName = "dropdown", IgnoreNameEndings = "DropdownButton,DropDownButton,Dropdown,DropDown,Button")]
     [ControlFinding(FindTermBy.ChildContent)]
-    [ClickParent(AppliesTo = TriggerScope.Children)]
+    [InvokeMethod(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, AppliesTo = TriggerScope.Children)]
+    [InvokeMethod(nameof(OnInit), TriggerEvents.Init)]
     public class BSDropdown<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
         [FindFirst]
         [TraceLog]
-        [InvokeMethod(nameof(OnToggleInit), TriggerEvents.Init)]
         protected BSDropdownToggle<TOwner> Toggle { get; private set; }
 
-        protected void OnToggleInit()
+        [FindByClass(BSClass.DropdownMenu, Visibility = Visibility.Any)]
+        [TraceLog]
+        protected Control<TOwner> DropdownMenu { get; private set; }
+
+        protected void OnInit()
         {
-            Toggle.Triggers.RemoveAll(x => x is ClickParentAttribute);
+            Toggle.Triggers.RemoveAll(x => x is InvokeMethodAttribute);
+            DropdownMenu.Triggers.RemoveAll(x => x is InvokeMethodAttribute);
+        }
+
+        protected void OnBeforeAccessChild()
+        {
+            if (!DropdownMenu.IsVisible)
+                Click();
         }
 
         protected override bool GetIsEnabled()

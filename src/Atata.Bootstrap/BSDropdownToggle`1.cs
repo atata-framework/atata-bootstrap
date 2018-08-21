@@ -15,7 +15,7 @@ namespace Atata.Bootstrap
     public class BSDropdownToggle<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
-        [FindByClass("dropdown-menu", OuterXPath = "following-sibling::", Visibility = Visibility.Any)]
+        [FindByClass(BSClass.DropdownMenu, OuterXPath = "following-sibling::", Visibility = Visibility.Any)]
         [TraceLog]
         protected Control<TOwner> DropdownMenu { get; private set; }
 
@@ -24,15 +24,15 @@ namespace Atata.Bootstrap
             DropdownMenu.Triggers.RemoveAll(x => x is InvokeMethodAttribute);
         }
 
-        protected override bool GetIsEnabled()
-        {
-            return !Attributes.Class.Value.Contains(BSClass.Disabled);
-        }
-
         protected void OnBeforeAccessChild()
         {
             if (!DropdownMenu.IsVisible)
                 Click();
+        }
+
+        protected override bool GetIsEnabled()
+        {
+            return !Attributes.Class.Value.Contains(BSClass.Disabled);
         }
     }
 }

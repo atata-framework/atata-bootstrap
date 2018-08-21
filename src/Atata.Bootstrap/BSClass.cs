@@ -15,5 +15,7 @@
         public const string Dropdown = "dropdown";
 
         public const string DropdownToggle = "dropdown-toggle";
+
+        public const string DropdownMenu = "dropdown-menu";
     }
 }
