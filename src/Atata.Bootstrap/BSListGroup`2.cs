@@ -8,7 +8,7 @@
     /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
     /// <seealso cref="BSListGroupItem{TOwner}" />
     [ControlDefinition(ContainingClass = BSClass.ListGroup, ComponentTypeName = "list group")]
-    [FindSettings(OuterXPath = "./")]
+    [FindSettings(OuterXPath = "./", TargetAnyType = true)]
     public class BSListGroup<TItem, TOwner> : ItemsControl<TItem, TOwner>
         where TItem : Control<TOwner>
         where TOwner : PageObject<TOwner>

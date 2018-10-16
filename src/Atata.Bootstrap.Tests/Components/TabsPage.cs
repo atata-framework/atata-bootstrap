@@ -3,7 +3,7 @@
     using _ = TabsPage;
 
     [Url("Tabs.html")]
-    [TermFindSettings(FindTermBy.Id, Case = TermCase.LowerMerged)]
+    [TermFindSettings(Case = TermCase.LowerMerged, TargetAttributeType = typeof(FindByIdAttribute), TargetAnyType = true)]
     public class TabsPage : Page<_>
     {
         public TabPane1 Pane1 { get; private set; }

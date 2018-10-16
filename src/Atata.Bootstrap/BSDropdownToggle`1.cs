@@ -9,7 +9,7 @@ namespace Atata.Bootstrap
     /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
     [ControlDefinition(ContainingClass = BSClass.DropdownToggle, ComponentTypeName = "dropdown toggle", IgnoreNameEndings = "DropdownButton,DropDownButton,Dropdown,DropDown,Button,DropdownToggle,DropDownToggle,Toggle")]
     [ControlFinding(FindTermBy.Content)]
-    [FindSettings(OuterXPath = "following-sibling::*[1]//")]
+    [FindSettings(OuterXPath = "following-sibling::*[1]//", TargetAnyType = true)]
     [InvokeMethod(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, AppliesTo = TriggerScope.Children)]
     [InvokeMethod(nameof(OnInit), TriggerEvents.Init)]
     public class BSDropdownToggle<TOwner> : Control<TOwner>
