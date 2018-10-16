@@ -12,7 +12,7 @@ Works with Bootstrap components of version 3.3 and 4.0+.
 
 Supports .NET Framework 4.0+ and .NET Core/Standard 2.0+.
 
-**[What's new in v0.7.0](https://atata-framework.github.io/blog/2018/08/20/atata.bootstrap-0.7.0-released/)**
+**[What's new in v1.0.0](https://atata-framework.github.io/blog/2018/10/16/atata.bootstrap-1.0.0-released/)**
 
 ## Components
 
