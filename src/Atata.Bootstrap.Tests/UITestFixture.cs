@@ -1,20 +1,19 @@
-﻿using System.Configuration;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Atata.Bootstrap.Tests
 {
     [TestFixture]
     public abstract class UITestFixture
     {
+        public const string BaseUrl = "http://localhost:56073/";
+
         [SetUp]
         public virtual void SetUp()
         {
-            string baseUrl = ConfigurationManager.AppSettings["TestAppUrl"];
-
             AtataContext.Configure().
                 UseChrome().
-                    WithArguments("start-maximized").
-                UseBaseUrl(baseUrl).
+                    WithArguments("start-maximized", "disable-infobars", "disable-extensions").
+                UseBaseUrl(BaseUrl).
                 UseCulture("en-us").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().
@@ -25,7 +24,7 @@ namespace Atata.Bootstrap.Tests
         [TearDown]
         public virtual void TearDown()
         {
-            AtataContext.Current.CleanUp();
+            AtataContext.Current?.CleanUp();
         }
     }
 }
