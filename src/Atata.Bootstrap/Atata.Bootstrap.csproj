@@ -15,6 +15,7 @@ Supports .NET Framework 4.0+ and .NET Core/Standard 2.0+.
 Atata.Bootstrap on GitHub: https://github.com/atata-framework/atata-bootstrap
 Atata Framework documentation: https://atata-framework.github.io</Description>
     <Copyright>© Yevgeniy Shunevych 2018</Copyright>
+    <PackageId>Atata.Bootstrap</PackageId>
     <PackageLicenseUrl>https://raw.githubusercontent.com/atata-framework/atata-bootstrap/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/atata-framework/atata-bootstrap</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/atata-framework/atata/master/logo_68.png</PackageIconUrl>
