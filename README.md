@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/atata-framework/atata-bootstrap.svg)](https://github.com/atata-framework/atata-bootstrap/releases)
 [![Gitter](https://badges.gitter.im/atata-framework/atata-bootstrap.svg)](https://gitter.im/atata-framework/atata-bootstrap)
 [![Slack](https://img.shields.io/badge/join-Slack-green.svg?colorB=4EB898)](https://join.slack.com/t/atata-framework/shared_invite/enQtNDMzMzk3OTY5NjgzLTJlNzAyN2E3MzY3MDE4ZGE1ZDQzOGY2NThiYWExZTNkNDc5YjdlNzFjYmUwYjZmNDI2MDJlMGQ3ODNlMDljMzU)
-[![Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata-framework.github.io/)
+[![Atata Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata.io)
 [![Twitter](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://twitter.com/AtataFramework)
 
 C#/.NET package containing a set of [Atata](https://github.com/atata-framework/atata) components for automated web testing integration with [Bootstrap Framework](https://getbootstrap.com/).
@@ -13,7 +13,7 @@ Works with Bootstrap components of version 3.3 and 4.0+.
 
 Supports .NET Framework 4.0+ and .NET Core/Standard 2.0+.
 
-**[What's new in v1.0.0](https://atata-framework.github.io/blog/2018/10/16/atata.bootstrap-1.0.0-released/)**
+**[What's new in v1.0.0](https://atata.io/blog/2018/10/16/atata.bootstrap-1.0.0-released/)**
 
 ## Components
 
