@@ -5,16 +5,16 @@ namespace Atata.Bootstrap.Tests
     [TestFixture]
     public abstract class UITestFixture
     {
-        public const string BaseUrl = "http://localhost:56073/";
+        public const string BaseUrl = "http://localhost:59372/";
 
         [SetUp]
         public virtual void SetUp()
         {
             AtataContext.Configure().
                 UseChrome().
-                    WithArguments("start-maximized", "disable-infobars", "disable-extensions").
+                    WithArguments("start-maximized").
                 UseBaseUrl(BaseUrl).
-                UseCulture("en-us").
+                UseCulture("en-US").
                 UseNUnitTestName().
                 AddNUnitTestContextLogging().
                 LogNUnitError().

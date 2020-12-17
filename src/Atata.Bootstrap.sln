@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atata.Bootstrap", "Atata.Bootstrap\Atata.Bootstrap.csproj", "{AD6D1F54-007E-4C7D-8A2B-4A176CF00484}"
 EndProject
@@ -9,14 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		Atata.ruleset = Atata.ruleset
 		..\azure-pipelines.yml = ..\azure-pipelines.yml
-		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
 		..\CONTRIBUTING_COMPONENT.md = ..\CONTRIBUTING_COMPONENT.md
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atata.Bootstrap.TestApp", "Atata.Bootstrap.TestApp\Atata.Bootstrap.TestApp.csproj", "{BB08E10A-6381-4B3E-8917-75B6DD04DF38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atata.Bootstrap.Tests", "Atata.Bootstrap.Tests\Atata.Bootstrap.Tests.csproj", "{82FB2B18-B760-4DC2-B66C-B2FAC48BC6A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atata.Bootstrap.Tests", "Atata.Bootstrap.Tests\Atata.Bootstrap.Tests.csproj", "{82FB2B18-B760-4DC2-B66C-B2FAC48BC6A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

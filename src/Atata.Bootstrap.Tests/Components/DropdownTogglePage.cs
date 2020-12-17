@@ -2,7 +2,7 @@
 {
     using _ = DropdownTogglePage;
 
-    [Url("Dropdown.html")]
+    [Url("dropdown")]
     public class DropdownTogglePage : Page<_>
     {
         public RegularDropdownToggle Regular { get; private set; }

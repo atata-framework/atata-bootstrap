@@ -2,7 +2,7 @@
 {
     using _ = DropdownPage;
 
-    [Url("Dropdown.html")]
+    [Url("dropdown")]
     public class DropdownPage : Page<_>
     {
         public RegularDropdown Regular { get; private set; }

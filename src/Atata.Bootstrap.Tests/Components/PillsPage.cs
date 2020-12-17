@@ -2,7 +2,7 @@
 {
     using _ = PillsPage;
 
-    [Url("Pills.html")]
+    [Url("pills")]
     [TermFindSettings(Case = TermCase.LowerMerged, TargetAttributeType = typeof(FindByIdAttribute), TargetAnyType = true)]
     public class PillsPage : Page<_>
     {

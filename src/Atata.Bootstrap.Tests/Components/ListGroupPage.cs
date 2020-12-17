@@ -2,7 +2,7 @@
 {
     using _ = ListGroupPage;
 
-    [Url("ListGroup.html")]
+    [Url("listgroup")]
     public class ListGroupPage : Page<_>
     {
         public ControlList<BSListGroup<_>, _> AllListGroups { get; private set; }
