@@ -3,6 +3,7 @@
 namespace Atata.Bootstrap.Tests
 {
     [TestFixture]
+    [Parallelizable]
     public abstract class UITestFixture
     {
         public const string BaseUrl = "http://localhost:59372/";
