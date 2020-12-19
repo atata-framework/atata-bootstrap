@@ -6,9 +6,8 @@
     /// </summary>
     /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
     [ControlDefinition(ContainingClass = BSClass.Dropdown, ComponentTypeName = "dropdown", IgnoreNameEndings = "DropdownButton,DropDownButton,Dropdown,DropDown,Button")]
-    [ControlFinding(FindTermBy.ChildContent)]
-    [InvokeMethod(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, AppliesTo = TriggerScope.Children)]
-    [InvokeMethod(nameof(OnInit), TriggerEvents.Init)]
+    [FindByChildContent]
+    [InvokeMethodWithExcluding(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, TargetAllChildren = true, TargetNamesExclude = new[] { nameof(Toggle), nameof(DropdownMenu) })]
     public class BSDropdown<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
@@ -19,12 +18,6 @@
         [FindByClass(BSClass.DropdownMenu, Visibility = Visibility.Any)]
         [TraceLog]
         protected Control<TOwner> DropdownMenu { get; private set; }
-
-        protected void OnInit()
-        {
-            Toggle.Triggers.RemoveAll(x => x is InvokeMethodAttribute);
-            DropdownMenu.Triggers.RemoveAll(x => x is InvokeMethodAttribute);
-        }
 
         protected void OnBeforeAccessChild()
         {

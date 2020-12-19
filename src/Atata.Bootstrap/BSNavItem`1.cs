@@ -4,12 +4,12 @@ using OpenQA.Selenium;
 namespace Atata.Bootstrap
 {
     [ControlDefinition("li", ComponentTypeName = "nav item")]
-    [ControlFinding(FindTermBy.Content)]
+    [FindByContent]
     public class BSNavItem<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
         public DataProvider<bool, TOwner> IsActive => GetOrCreateDataProvider(
-            nameof(IsActive).ToString(TermCase.MidSentence),
+            "active state",
             () => Attributes.Class.Value.Contains(BSClass.Active));
 
         protected override bool GetIsEnabled()
