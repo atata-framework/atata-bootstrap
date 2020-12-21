@@ -1,0 +1,25 @@
+﻿@page
+@{
+    ViewBag.Title = "Dropdown";
+}
+<h2>Regular</h2>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="regular" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Regular
+    </button>
+    <div class="dropdown-menu" aria-labelledby="regular">
+        <a class="dropdown-item" href="#">Item 1</a>
+        <a class="dropdown-item" href="#">Item 2</a>
+        <a class="dropdown-item" href="#">Item 3</a>
+    </div>
+</div>
+
+<h2>Disabled</h2>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle disabled" type="button" id="disabled" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Disabled
+    </button>
+    <div class="dropdown-menu" aria-labelledby="disabled">
+        <a class="dropdown-item" href="#">Item 1</a>
+    </div>
+</div>
