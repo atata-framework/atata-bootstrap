@@ -7,7 +7,7 @@
     {
         public RegularDropdown Regular { get; private set; }
 
-        public BSDropdownToggle<_> Disabled { get; private set; }
+        public BSDropdown<_> Disabled { get; private set; }
 
         public class RegularDropdown : BSDropdown<_>
         {
