@@ -1,34 +1,28 @@
 ﻿@page
 @{
-    ViewBag.Title = "Pills";
+    ViewBag.Title = "Tabs";
 }
-<ul class="nav nav-pills">
-    <li class="nav-item">
-        <a class="nav-link active" data-toggle="pill" href="#pane1">Menu 1</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="pill" href="#pane2">Menu 2</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="pill" href="#pane3">Menu 3</a>
-    </li>
-    <li class="nav-item">
+<nav>
+    <div class="nav nav-tabs" role="tablist">
+        <a class="nav-link active" href="#pane1" data-bs-toggle="tab" role="tab" aria-controls="pane1" aria-selected="true">Menu 1</a>
+        <a class="nav-link" href="#pane2" data-bs-toggle="tab" role="tab" aria-controls="pane2" aria-selected="false">Menu 2</a>
+        <a class="nav-link" href="#pane3" data-bs-toggle="tab" role="tab" aria-controls="pane3" aria-selected="false">Menu 3</a>
         <a class="nav-link disabled" href="#pane4">Menu 4</a>
-    </li>
-</ul>
+    </div>
+</nav>
 
 <div class="tab-content">
-    <div id="pane1" class="tab-pane fade show active">
+    <div id="pane1" class="tab-pane fade show active" role="tabpanel">
         <h3>Menu 1</h3>
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <input type="text" id="some-input" />
     </div>
-    <div id="pane2" class="tab-pane fade">
+    <div id="pane2" class="tab-pane fade" role="tabpanel">
         <h3>Menu 2</h3>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
         <input type="checkbox" id="some-checkbox" />
     </div>
-    <div id="pane3" class="tab-pane fade">
+    <div id="pane3" class="tab-pane fade" role="tabpanel">
         <h3>Menu 3</h3>
         <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>

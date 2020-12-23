@@ -6,7 +6,7 @@ namespace Atata.Bootstrap.Tests
     [Parallelizable]
     public abstract class UITestFixture
     {
-        public const string BaseUrl = "http://localhost:59372/";
+        public const string BaseUrl = "http://localhost:59372/v3/";
 
         [SetUp]
         public virtual void SetUp()
