@@ -20,8 +20,9 @@
 
         public BSPill<_> Menu4 { get; private set; }
 
-        [FindByClass("active")]
-        public BSPill<_> ActiveMenu { get; private set; }
+        public ControlList<BSPill<_>, _> MenuItems { get; private set; }
+
+        public BSPill<_> ActiveMenu => MenuItems[x => x.IsActive];
 
         public class TabPane1 : BSTabPane<_>
         {
