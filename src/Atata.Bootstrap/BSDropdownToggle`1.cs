@@ -31,7 +31,7 @@ namespace Atata.Bootstrap
 
         protected override bool GetIsEnabled()
         {
-            return !Attributes.Class.Value.Contains(BSClass.Disabled);
+            return base.GetIsEnabled() && !Attributes.Class.Value.Contains(BSClass.Disabled);
         }
     }
 }
