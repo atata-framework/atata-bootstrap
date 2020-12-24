@@ -14,12 +14,11 @@ Supports .NET Framework 4.0+ and .NET Core/Standard 2.0+.
 
 Atata.Bootstrap on GitHub: https://github.com/atata-framework/atata-bootstrap
 Atata Framework documentation: https://atata-framework.github.io</Description>
-    <Copyright>© Yevgeniy Shunevych 2018</Copyright>
+    <Copyright>© Yevgeniy Shunevych 2020</Copyright>
     <PackageId>Atata.Bootstrap</PackageId>
     <PackageLicenseUrl>https://raw.githubusercontent.com/atata-framework/atata-bootstrap/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/atata-framework/atata-bootstrap</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/atata-framework/atata/master/logo_68.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/atata-framework/atata-bootstrap</RepositoryUrl>
     <PackageTags>atata automation testing test selenium webdriver browser bootstrap</PackageTags>
     <PackageReleaseNotes>1.0.0 - https://atata-framework.github.io/blog/2018/10/16/atata.bootstrap-1.0.0-released/
 0.7.0 - https://atata-framework.github.io/blog/2018/08/20/atata.bootstrap-0.7.0-released/
@@ -30,12 +29,17 @@ Atata Framework documentation: https://atata-framework.github.io</Description>
 0.3.0 - Initial release.</PackageReleaseNotes>
     <CodeAnalysisRuleSet>..\Atata.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RepositoryUrl>https://github.com/atata-framework/atata-bootstrap</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Atata" Version="1.9.0" />
     <PackageReference Include="Atata.WebDriverExtras" Version="1.4.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
       <PrivateAssets>All</PrivateAssets>
