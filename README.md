@@ -10,11 +10,11 @@
 
 C#/.NET package containing a set of [Atata](https://github.com/atata-framework/atata) components for automated web testing integration with [Bootstrap Framework](https://getbootstrap.com/).
 
-Works with Bootstrap components of version 3.3 and 4.0+.
+Works with Bootstrap components of version 3-5.
 
 Supports .NET Framework 4.0+ and .NET Core/Standard 2.0+.
 
-**[What's new in v1.0.0](https://atata.io/blog/2018/10/16/atata.bootstrap-1.0.0-released/)**
+**[What's new in v1.1.0](https://atata.io/blog/2020/12/24/atata.bootstrap-1.1.0-released/)**
 
 ## Components
 
