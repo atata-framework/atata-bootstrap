@@ -16,7 +16,7 @@ Atata.Bootstrap on GitHub: https://github.com/atata-framework/atata-bootstrap
 Atata Framework documentation: https://atata-framework.github.io</Description>
     <Copyright>© Yevgeniy Shunevych 2020</Copyright>
     <PackageId>Atata.Bootstrap</PackageId>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/atata-framework/atata-bootstrap/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/atata-framework/atata-bootstrap</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageTags>atata automation testing test selenium webdriver browser bootstrap</PackageTags>
