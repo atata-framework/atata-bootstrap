@@ -18,7 +18,7 @@ Atata Framework documentation: https://atata-framework.github.io</Description>
     <PackageId>Atata.Bootstrap</PackageId>
     <PackageLicenseUrl>https://raw.githubusercontent.com/atata-framework/atata-bootstrap/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/atata-framework/atata-bootstrap</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/atata-framework/atata/master/logo_68.png</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageTags>atata automation testing test selenium webdriver browser bootstrap</PackageTags>
     <PackageReleaseNotes>1.0.0 - https://atata-framework.github.io/blog/2018/10/16/atata.bootstrap-1.0.0-released/
 0.7.0 - https://atata-framework.github.io/blog/2018/08/20/atata.bootstrap-0.7.0-released/
@@ -43,4 +43,9 @@ Atata Framework documentation: https://atata-framework.github.io</Description>
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  
 </Project>
