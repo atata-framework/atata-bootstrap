@@ -4,6 +4,11 @@ namespace Atata.Bootstrap.Tests
 {
     public class BSNavTests : UITestFixture
     {
+        public BSNavTests(string bootstrapVersionString)
+            : base(bootstrapVersionString)
+        {
+        }
+
         [Test]
         public void BSTabPane_Pills()
         {

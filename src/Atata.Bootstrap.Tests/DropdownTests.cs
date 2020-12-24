@@ -6,6 +6,11 @@ namespace Atata.Bootstrap.Tests
     {
         private DropdownPage page;
 
+        public DropdownTests(string bootstrapVersionString)
+            : base(bootstrapVersionString)
+        {
+        }
+
         public override void SetUp()
         {
             base.SetUp();

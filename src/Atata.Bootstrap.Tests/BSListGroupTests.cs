@@ -6,6 +6,11 @@ namespace Atata.Bootstrap.Tests
     {
         private ListGroupPage page;
 
+        public BSListGroupTests(string bootstrapVersionString)
+            : base(bootstrapVersionString)
+        {
+        }
+
         public override void SetUp()
         {
             base.SetUp();
