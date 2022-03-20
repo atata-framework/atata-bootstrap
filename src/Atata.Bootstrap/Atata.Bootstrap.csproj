@@ -22,7 +22,7 @@ Atata Framework documentation: https://atata-framework.github.io</Description>
     <PackageTags>atata automation testing test selenium webdriver browser bootstrap</PackageTags>
     <PackageReleaseNotes>1.1.0 - https://atata.io/blog/2020/12/24/atata.bootstrap-1.1.0-released/
 1.0.0 - https://atata.io/blog/2018/10/16/atata.bootstrap-1.0.0-released/</PackageReleaseNotes>
-    <CodeAnalysisRuleSet>..\Atata.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\..\Atata.ruleset</CodeAnalysisRuleSet>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RepositoryUrl>https://github.com/atata-framework/atata-bootstrap</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

@@ -6,7 +6,7 @@
     <Company>Yevgeniy Shunevych</Company>
     <Product>Atata Framework</Product>
     <Copyright>© Yevgeniy Shunevych 2020</Copyright>
-    <CodeAnalysisRuleSet>..\Atata.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\..\Atata.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Atata.Bootstrap\Atata.Bootstrap.csproj" />
+    <ProjectReference Include="..\..\src\Atata.Bootstrap\Atata.Bootstrap.csproj" />
   </ItemGroup>
 
 </Project>
