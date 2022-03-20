@@ -18,11 +18,6 @@ namespace Atata.Bootstrap
         [TraceLog]
         protected Control<TOwner> DropdownMenu { get; private set; }
 
-        protected void OnInit()
-        {
-            DropdownMenu.Metadata.RemoveAll(x => x is InvokeMethodAttribute);
-        }
-
         protected void OnBeforeAccessChild()
         {
             if (!DropdownMenu.IsVisible)

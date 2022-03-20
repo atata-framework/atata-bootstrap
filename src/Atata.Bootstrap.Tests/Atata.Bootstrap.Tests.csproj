@@ -10,11 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Atata.WebDriverSetup" Version="1.2.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="87.0.4280.8800" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="99.0.4844.5100" />
     <PackageReference Include="SonarAnalyzer.CSharp" Version="7.5.0.6605" PrivateAssets="All" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" PrivateAssets="All" />
   </ItemGroup>
