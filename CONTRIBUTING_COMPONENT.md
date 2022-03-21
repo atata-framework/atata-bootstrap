@@ -2,12 +2,11 @@
 
 ## Development Prerequisites
 
-- Visual Studio 2017 (any edition)
-- [SonarLint for Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017) for code analysis.
+- Visual Studio 2019 (any edition)
 
 ## Fork Repository
 
-Fork repository and open VS solution `src\Atata.Bootstrap.sln`.
+Fork repository and open VS solution `Atata.Bootstrap.sln`.
 
 ## Component Development
 
@@ -23,7 +22,7 @@ Choose which component to inherit, e.g.:
 - `PopupWindow<TOwner>` - for popup/modal windows.
 - `Control<TOwner>` - for other custom kinds of control.
 
-Define required attribues on component class and implement needed properties or methods.
+Define required attributes on component class and implement needed properties or methods.
 
 Be sure to keep disabled and read-only component states working.
 You can override `GetIsReadOnly` and `GetIsEnabled` methods.
@@ -31,11 +30,11 @@ You can override `GetIsReadOnly` and `GetIsEnabled` methods.
 ## Testing
 
 - Create test page in `Atata.Bootstrap.TestApp` project named `{{Component}}.html`. Add single or multiple HTML components to the page for testing with different component options.
-- Create page object class in Atata.Bootstrap.Tests project named `{{Component}}Page.cs`. Add required component properties.
-- Create test fixture class in Atata.Bootstrap.Tests project named `{{Component}}Tests.cs`
+- Create page object class in `Atata.Bootstrap.Tests` project named `{{Component}}Page.cs`. Add required component properties.
+- Create test fixture class in `Atata.Bootstrap.Tests` project named `{{Component}}Tests.cs`
 - Add primary test method to fixture named `{{Component}}` for basic control testing.
 - Optionally, if actual component has settings, add additional test methods to fixture named `{{Component}}_{{State}}` for specific component state testing.
-- Ensure that new and existing tests are executing succesfully. 
+- Ensure that new and existing tests are executing successfully. 
 
 ## Code Analysis
 
@@ -46,4 +45,4 @@ Then verify warnings and messages in "Error List" panel.
 
 ## Pull Request
 
-Commit and [create pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
+Commit with push and [create pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
