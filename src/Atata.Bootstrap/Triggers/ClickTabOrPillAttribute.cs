@@ -19,11 +19,10 @@ namespace Atata.Bootstrap
                 navItem.Click();
         }
 
-        private BSNavItem<TOwner> GetNavItem<TOwner>(TriggerContext<TOwner> context)
+        private static BSNavItem<TOwner> GetNavItem<TOwner>(TriggerContext<TOwner> context)
             where TOwner : PageObject<TOwner>
         {
-            var tabPane = context.Component.GetAncestorOrSelf<BSTabPane<TOwner>>() as IUIComponent<TOwner>;
-            if (tabPane == null)
+            if (!(context.Component.GetAncestorOrSelf<BSTabPane<TOwner>>() is IUIComponent<TOwner> tabPane))
                 throw new InvalidOperationException($"Cannot find '{nameof(BSTabPane<TOwner>)}' ancestor.");
 
             string navItemName = tabPane.ComponentName;

@@ -7,7 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atata.Bootstrap", "src\Atat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C505114-4436-4774-AF49-3BCB581EBFE5}"
 	ProjectSection(SolutionItems) = preProject
-		Atata.ruleset = Atata.ruleset
 		azure-pipelines.release.yml = azure-pipelines.release.yml
 		azure-pipelines.runsettings = azure-pipelines.runsettings
 		azure-pipelines.yml = azure-pipelines.yml

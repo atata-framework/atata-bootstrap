@@ -4,7 +4,7 @@ namespace Atata.Bootstrap.Tests
 {
     public class BSListGroupTests : UITestFixture
     {
-        private ListGroupPage page;
+        private ListGroupPage _page;
 
         public BSListGroupTests(string bootstrapVersionString)
             : base(bootstrapVersionString)
@@ -15,17 +15,17 @@ namespace Atata.Bootstrap.Tests
         {
             base.SetUp();
 
-            page = Go.To<ListGroupPage>();
+            _page = Go.To<ListGroupPage>();
         }
 
         [Test]
         public void BSListGroup()
         {
-            page.
+            _page.
                 AllListGroups.Count.Should.Equal(5).
                 AllListGroupItems.Count.Should.Equal(21);
 
-            var control = page.RegularGroup;
+            var control = _page.RegularGroup;
 
             control.Items.Count.Should.Equal(5);
             control.Items[1].Attributes.Class.Should.Contain("list-group-item-success");
@@ -36,7 +36,7 @@ namespace Atata.Bootstrap.Tests
         [Test]
         public void BSListGroup_Badges()
         {
-            var control = page.BadgeGroup;
+            var control = _page.BadgeGroup;
 
             control.Items.Count.Should.Equal(3);
             control.Items[x => x.Number == 2].Text.Should.Contain("Dapibus ac facilisis in");
@@ -46,7 +46,7 @@ namespace Atata.Bootstrap.Tests
         [Test]
         public void BSListGroup_Links()
         {
-            var control = page.LinkGroup;
+            var control = _page.LinkGroup;
 
             control.Items.Count.Should.Equal(5);
             control.Items[1].IsActive.Should.BeTrue();
@@ -59,7 +59,7 @@ namespace Atata.Bootstrap.Tests
         [Test]
         public void BSListGroup_Buttons()
         {
-            var control = page.ButtonGroup;
+            var control = _page.ButtonGroup;
 
             control.Items.Count.Should.Equal(5);
             control.Items[1].IsActive.Should.BeTrue();
@@ -73,7 +73,7 @@ namespace Atata.Bootstrap.Tests
         [Test]
         public void BSListGroup_CustomContent()
         {
-            var control = page.CustomContentGroup;
+            var control = _page.CustomContentGroup;
 
             control.Items.Count.Should.Equal(3);
             control.Items[x => x.Heading == "Item 2"].Text.Should.Equal("Item 2 text");
@@ -85,7 +85,7 @@ namespace Atata.Bootstrap.Tests
         [Test]
         public void BSListGroup_CustomGroup()
         {
-            var control = page.CustomGroup;
+            var control = _page.CustomGroup;
 
             control.Item1.Text.Should.Contain("Item 1 text");
             control.Item2.Heading.Should.Contain("Item 2");
