@@ -10,25 +10,25 @@ namespace Atata.Bootstrap.Tests
     {
         public const string BaseUrl = "http://localhost:59372/";
 
-        private readonly string bootstrapVersionString;
+        private readonly string _bootstrapVersionString;
 
         protected UITestFixture(string bootstrapVersionString)
         {
-            this.bootstrapVersionString = bootstrapVersionString;
+            _bootstrapVersionString = bootstrapVersionString;
         }
 
         [SetUp]
         public virtual void SetUp()
         {
-            AtataContext.Configure().
-                UseChrome().
-                    WithArguments("start-maximized").
-                UseBaseUrl(BaseUrl + bootstrapVersionString).
-                UseCulture("en-US").
-                UseNUnitTestName().
-                AddNUnitTestContextLogging().
-                LogNUnitError().
-                Build();
+            AtataContext.Configure()
+                .UseChrome()
+                    .WithArguments("start-maximized")
+                .UseBaseUrl(BaseUrl + _bootstrapVersionString)
+                .UseCulture("en-US")
+                .UseNUnitTestName()
+                .LogConsumers.AddNUnitTestContext()
+                .LogNUnitError()
+                .Build();
         }
 
         [TearDown]
