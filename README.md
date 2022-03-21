@@ -12,7 +12,7 @@ C#/.NET package containing a set of [Atata](https://github.com/atata-framework/a
 
 Works with Bootstrap components of version 3-5.
 
-Supports .NET Framework 4.0+ and .NET Core/Standard 2.0+.
+*The package targets .NET Standard 2.0, which supports .NET 5+, .NET Framework 4.6.1+ and .NET Core/Standard 2.0+.*
 
 **[What's new in v1.1.0](https://atata.io/blog/2020/12/24/atata.bootstrap-1.1.0-released/)**
 
