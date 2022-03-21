@@ -2,7 +2,7 @@
 
 [![NuGet](http://img.shields.io/nuget/v/Atata.Bootstrap.svg)](https://www.nuget.org/packages/Atata.Bootstrap/)
 [![GitHub release](https://img.shields.io/github/release/atata-framework/atata-bootstrap.svg)](https://github.com/atata-framework/atata-bootstrap/releases)
-[![Build status](https://dev.azure.com/atata-framework/atata-bootstrap/_apis/build/status/atata-bootstrap-ci?branchName=master)](https://dev.azure.com/atata-framework/atata-bootstrap/_build/latest?definitionId=29&branchName=master)
+[![Build status](https://dev.azure.com/atata-framework/atata-bootstrap/_apis/build/status/atata-bootstrap-ci?branchName=main)](https://dev.azure.com/atata-framework/atata-bootstrap/_build/latest?definitionId=29&branchName=main)
 [![Gitter](https://badges.gitter.im/atata-framework/atata-bootstrap.svg)](https://gitter.im/atata-framework/atata-bootstrap)
 [![Slack](https://img.shields.io/badge/join-Slack-green.svg?colorB=4EB898)](https://join.slack.com/t/atata-framework/shared_invite/zt-5j3lyln7-WD1ZtMDzXBhPm0yXLDBzbA)
 [![Atata Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata.io)
@@ -37,12 +37,20 @@ Namespace is `Atata.Bootstrap`.
 
 ## Demo
 
-[Atata Sample App Tests](https://github.com/atata-framework/atata-sample-app-tests) project demonstrates different automation testing approaches and features of the Atata Framework as well as Atata.Bootstrap package.
+[Atata Sample App Tests](https://github.com/atata-framework/atata-sample-app-tests) project
+demonstrates different automation testing approaches and features of the Atata Framework as well as Atata.Bootstrap package.
 Feel free to clone/fork it and check out the usage of Bootstrap components.
 
 ## Contributing
 
-*Check [How to Contribute a Component](CONTRIBUTING_COMPONENT.md) if you are interested in contributing to the repository.*
+*Check [Contributing Guidelines](CONTRIBUTING.md) and [How to Contribute a Component](CONTRIBUTING_COMPONENT.md)
+if you are interested in contributing to the repository.*
+
+## SemVer
+
+Atata Framework follows [Semantic Versioning 2.0](https://semver.org/).
+Thus backward compatibility is followed and updates within the same major version
+(e.g. from 1.3 to 1.4) should not require code changes.
 
 ## License
 
