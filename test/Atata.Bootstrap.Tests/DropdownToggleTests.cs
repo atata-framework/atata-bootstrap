@@ -4,7 +4,7 @@ namespace Atata.Bootstrap.Tests
 {
     public class DropdownToggleTests : UITestFixture
     {
-        private DropdownTogglePage page;
+        private DropdownTogglePage _page;
 
         public DropdownToggleTests(string bootstrapVersionString)
             : base(bootstrapVersionString)
@@ -15,13 +15,13 @@ namespace Atata.Bootstrap.Tests
         {
             base.SetUp();
 
-            page = Go.To<DropdownTogglePage>();
+            _page = Go.To<DropdownTogglePage>();
         }
 
         [Test]
         public void BSDropdownToggle()
         {
-            var control = page.Regular;
+            var control = _page.Regular;
 
             control.Should.BeVisible();
             control.Should.BeEnabled();
@@ -36,7 +36,7 @@ namespace Atata.Bootstrap.Tests
         [Test]
         public void BSDropdownToggle_Disabled()
         {
-            var control = page.Disabled;
+            var control = _page.Disabled;
 
             control.Should.BeVisible();
             control.Should.Not.BeEnabled();

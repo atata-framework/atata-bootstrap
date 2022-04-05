@@ -4,7 +4,7 @@ namespace Atata.Bootstrap.Tests
 {
     public class DropdownTests : UITestFixture
     {
-        private DropdownPage page;
+        private DropdownPage _page;
 
         public DropdownTests(string bootstrapVersionString)
             : base(bootstrapVersionString)
@@ -15,13 +15,13 @@ namespace Atata.Bootstrap.Tests
         {
             base.SetUp();
 
-            page = Go.To<DropdownPage>();
+            _page = Go.To<DropdownPage>();
         }
 
         [Test]
         public void BSDropdown()
         {
-            var control = page.Regular;
+            var control = _page.Regular;
 
             control.Should.BeVisible();
             control.Should.BeEnabled();
@@ -36,7 +36,7 @@ namespace Atata.Bootstrap.Tests
         [Test]
         public void BSDropdown_Disabled()
         {
-            var control = page.Disabled;
+            var control = _page.Disabled;
 
             control.Should.BeVisible();
             control.Should.Not.BeEnabled();
