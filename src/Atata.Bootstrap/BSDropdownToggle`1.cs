@@ -10,7 +10,7 @@ namespace Atata.Bootstrap
     [ControlDefinition(ContainingClass = BSClass.DropdownToggle, ComponentTypeName = "dropdown toggle", IgnoreNameEndings = "DropdownButton,DropDownButton,Dropdown,DropDown,Button,DropdownToggle,DropDownToggle,Toggle")]
     [FindByContent]
     [FindSettings(OuterXPath = "following-sibling::*[1]//", TargetAllChildren = true)]
-    [InvokeMethodWithExcluding(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, TargetAllChildren = true, TargetNameExclude = nameof(DropdownMenu))]
+    [InvokeMethod(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, TargetChildren = true, ExcludeTargetName = nameof(DropdownMenu))]
     public class BSDropdownToggle<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {

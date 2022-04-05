@@ -7,7 +7,7 @@
     /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
     [ControlDefinition(ContainingClass = BSClass.Dropdown, ComponentTypeName = "dropdown", IgnoreNameEndings = "DropdownButton,DropDownButton,Dropdown,DropDown,Button")]
     [FindByChildContent]
-    [InvokeMethodWithExcluding(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, TargetAllChildren = true, TargetNamesExclude = new[] { nameof(Toggle), nameof(DropdownMenu) })]
+    [InvokeMethod(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, TargetChildren = true, ExcludeTargetNames = new[] { nameof(Toggle), nameof(DropdownMenu) })]
     public class BSDropdown<TOwner> : Control<TOwner>
         where TOwner : PageObject<TOwner>
     {
