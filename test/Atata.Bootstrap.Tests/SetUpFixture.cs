@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
-using System.Net;
-using System.Threading;
+using System.Linq;
+using System.Net.NetworkInformation;
 using System.Threading.Tasks;
+using Atata.Cli;
 using Atata.WebDriverSetup;
 using NUnit.Framework;
 
@@ -12,68 +12,50 @@ namespace Atata.Bootstrap.Tests
     [SetUpFixture]
     public class SetUpFixture
     {
-        private Process _coreRunProcess;
+        private CliCommand _dotnetRunCommand;
 
         [OneTimeSetUp]
-        public async Task GlobalSetUpAsync()
-        {
+        public async Task GlobalSetUpAsync() =>
             await Task.WhenAll(
-                Task.Run(SetUpDriver),
+                DriverSetup.AutoSetUpAsync(BrowserNames.Chrome),
                 Task.Run(SetUpTestApp));
-        }
 
-        private static void SetUpDriver() =>
-            DriverSetup.AutoSetUp(BrowserNames.Chrome);
-
-        private static WebResponse PingTestApp() =>
-            WebRequest.CreateHttp(UITestFixture.BaseUrl).GetResponse();
+        private static bool IsTestAppRunning() =>
+            IPGlobalProperties.GetIPGlobalProperties()
+                .GetActiveTcpListeners()
+                .Any(x => x.Port == UITestFixture.TestAppPort);
 
         private void SetUpTestApp()
         {
-            try
-            {
-                PingTestApp();
-            }
-            catch (WebException)
-            {
-                RunTestApp();
-            }
+            if (!IsTestAppRunning())
+                StartTestApp();
         }
 
-        private void RunTestApp()
+        private void StartTestApp()
         {
-            _coreRunProcess = new Process
-            {
-                StartInfo = new ProcessStartInfo
-                {
-                    FileName = "cmd.exe",
-                    Arguments = "/c dotnet run",
-                    WorkingDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\\..\\..\\..\\Atata.Bootstrap.TestApp")
-                }
-            };
+            string testAppPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "Atata.Bootstrap.TestApp");
 
-            _coreRunProcess.Start();
+            ProgramCli dotnetCli = new ProgramCli("dotnet", useCommandShell: true)
+                .WithWorkingDirectory(testAppPath);
 
-            Thread.Sleep(5000);
+            _dotnetRunCommand = dotnetCli.Start("run");
 
             var testAppWait = new SafeWait<SetUpFixture>(this)
             {
                 Timeout = TimeSpan.FromSeconds(40),
-                PollingInterval = TimeSpan.FromSeconds(1)
+                PollingInterval = TimeSpan.FromSeconds(0.2)
             };
 
-            testAppWait.IgnoreExceptionTypes(typeof(WebException));
-
-            testAppWait.Until(x => PingTestApp());
+            testAppWait.Until(x => IsTestAppRunning());
         }
 
         [OneTimeTearDown]
         public void GlobalTearDown()
         {
-            if (_coreRunProcess != null)
+            if (_dotnetRunCommand != null)
             {
-                _coreRunProcess.Kill(true);
-                _coreRunProcess.Dispose();
+                _dotnetRunCommand.Kill(true);
+                _dotnetRunCommand.Dispose();
             }
         }
     }

@@ -8,21 +8,22 @@ namespace Atata.Bootstrap.Tests
     [Parallelizable]
     public abstract class UITestFixture
     {
-        public const string BaseUrl = "http://localhost:59372/";
+        public const int TestAppPort = 59372;
 
         private readonly string _bootstrapVersionString;
 
-        protected UITestFixture(string bootstrapVersionString)
-        {
+        protected UITestFixture(string bootstrapVersionString) =>
             _bootstrapVersionString = bootstrapVersionString;
-        }
+
+        public static string BaseUrl { get; } = $"http://localhost:{TestAppPort}/";
 
         [SetUp]
         public virtual void SetUp()
         {
             AtataContext.Configure()
                 .UseChrome()
-                    .WithArguments("start-maximized")
+                    .WithArguments("window-size=1200,800")
+                    .WithArguments("headless")
                 .UseBaseUrl(BaseUrl + _bootstrapVersionString)
                 .UseCulture("en-US")
                 .UseNUnitTestName()
@@ -32,9 +33,7 @@ namespace Atata.Bootstrap.Tests
         }
 
         [TearDown]
-        public virtual void TearDown()
-        {
+        public virtual void TearDown() =>
             AtataContext.Current?.CleanUp();
-        }
     }
 }
