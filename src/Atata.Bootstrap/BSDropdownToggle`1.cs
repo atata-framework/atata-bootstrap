@@ -24,9 +24,7 @@ namespace Atata.Bootstrap
                 Click();
         }
 
-        protected override bool GetIsEnabled()
-        {
-            return base.GetIsEnabled() && !Attributes.Class.Value.Contains(BSClass.Disabled);
-        }
+        protected override bool GetIsEnabled() =>
+            base.GetIsEnabled() && !Attributes.Class.Value.Contains(BSClass.Disabled);
     }
 }

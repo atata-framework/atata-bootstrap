@@ -27,9 +27,9 @@ namespace Atata.Bootstrap
 
             string navItemName = tabPane.ComponentName;
 
-            BSNavItem<TOwner> navItem = tabPane.Parent.Controls.
-                OfType<IUIComponent<TOwner>>().
-                FirstOrDefault(x => x.ComponentName == navItemName && (x is BSPill<TOwner> || x is BSTab<TOwner>))
+            BSNavItem<TOwner> navItem = tabPane.Parent.Controls
+                .OfType<IUIComponent<TOwner>>()
+                .FirstOrDefault(x => x.ComponentName == navItemName && (x is BSPill<TOwner> || x is BSTab<TOwner>))
                 as BSNavItem<TOwner>;
 
             if (navItem == null)

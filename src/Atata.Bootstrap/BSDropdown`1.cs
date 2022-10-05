@@ -25,29 +25,19 @@
                 Click();
         }
 
-        protected override bool GetIsEnabled()
-        {
-            return Toggle.IsEnabled;
-        }
+        protected override bool GetIsEnabled() =>
+            Toggle.IsEnabled;
 
-        protected override void OnClick()
-        {
+        protected override void OnClick() =>
             Toggle.Click();
-        }
 
-        protected override void OnDoubleClick()
-        {
+        protected override void OnDoubleClick() =>
             Toggle.DoubleClick();
-        }
 
-        protected override void OnRightClick()
-        {
+        protected override void OnRightClick() =>
             Toggle.RightClick();
-        }
 
-        protected override void OnHover()
-        {
+        protected override void OnHover() =>
             Toggle.Hover();
-        }
     }
 }
