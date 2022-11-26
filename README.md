@@ -33,7 +33,7 @@ Namespace is `Atata.Bootstrap`.
 
 ## Triggers
 
-- `ClickTabOrPill`
+- `ClickTabOrPillAttribute`
 
 ## Demo
 
