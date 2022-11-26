@@ -26,8 +26,8 @@ public class BSListGroupTests : UITestFixture
         var control = _page.RegularGroup;
 
         control.Items.Count.Should.Equal(5);
-        control.Items[1].Attributes.Class.Should.Contain("list-group-item-success");
-        control.Items[3].Attributes.Class.Should.Contain("list-group-item-danger");
+        control.Items[1].DomClasses.Should.Contain("list-group-item-success");
+        control.Items[3].DomClasses.Should.Contain("list-group-item-danger");
         control.Items[2].Content.Should.Equal("Morbi leo risus");
     }
 
@@ -65,7 +65,7 @@ public class BSListGroupTests : UITestFixture
         control.Items[2].Should.BeEnabled();
         control.Items[2].Content.Should.Equal("Morbi leo risus");
         control.Items[3].Should.BeDisabled();
-        control.Items[4].Attributes.Class.Should.Contain("list-group-item-success");
+        control.Items[4].DomClasses.Should.Contain("list-group-item-success");
     }
 
     [Test]

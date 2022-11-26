@@ -25,6 +25,6 @@ namespace Atata.Bootstrap
         }
 
         protected override bool GetIsEnabled() =>
-            base.GetIsEnabled() && !Attributes.Class.Value.Contains(BSClass.Disabled);
+            base.GetIsEnabled() && !DomClasses.Value.Contains(BSClass.Disabled);
     }
 }

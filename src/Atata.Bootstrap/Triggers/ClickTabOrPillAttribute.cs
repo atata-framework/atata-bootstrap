@@ -34,7 +34,7 @@ namespace Atata.Bootstrap
 
             if (navItem == null)
             {
-                string tabPillInnerXPath = $"(self::a | child::a)[@href='#{tabPane.Attributes.Id.Value}']";
+                string tabPillInnerXPath = $"(self::a | child::a)[@href='#{tabPane.DomProperties.Id.Value}']";
                 string pillXPath = UIComponentResolver.GetControlDefinition(typeof(BSPill<TOwner>)).ScopeXPath;
 
                 bool isUsingPill = tabPane.Parent.ScopeContext.Exists(By.XPath($".//{pillXPath}[{tabPillInnerXPath}]").SafelyAtOnce());

@@ -12,9 +12,9 @@ namespace Atata.Bootstrap
         where TOwner : PageObject<TOwner>
     {
         public ValueProvider<bool, TOwner> IsActive =>
-            CreateValueProvider("active state", () => Attributes.Class.Value.Contains(BSClass.Active));
+            CreateValueProvider("active state", () => DomClasses.Value.Contains(BSClass.Active));
 
         protected override bool GetIsEnabled() =>
-            !Attributes.Class.Value.Contains(BSClass.Disabled);
+            !DomClasses.Value.Contains(BSClass.Disabled);
     }
 }
