@@ -16,9 +16,9 @@ public class SetUpFixture
             Task.Run(SetUpTestApp));
 
     private static bool IsTestAppRunning() =>
-        IPGlobalProperties.GetIPGlobalProperties()
-            .GetActiveTcpListeners()
-            .Any(x => x.Port == UITestFixture.TestAppPort);
+        Array.Exists(
+            IPGlobalProperties.GetIPGlobalProperties().GetActiveTcpListeners(),
+            x => x.Port == UITestFixture.TestAppPort);
 
     private void SetUpTestApp()
     {
