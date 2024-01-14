@@ -19,16 +19,13 @@ public abstract class UITestFixture
     public virtual void SetUp() =>
         AtataContext.Configure()
             .UseChrome()
-                .WithArguments("window-size=1200,800")
-                .WithArguments("headless")
+                .WithArguments("window-size=1200,800", "headless")
             .UseBaseUrl(BaseUrl + _bootstrapVersionString)
             .UseCulture("en-US")
-            .UseNUnitTestName()
-            .LogConsumers.AddNUnitTestContext()
-            .LogNUnitError()
+            .UseAllNUnitFeatures()
             .Build();
 
     [TearDown]
     public virtual void TearDown() =>
-        AtataContext.Current?.CleanUp();
+        AtataContext.Current?.Dispose();
 }
