@@ -1,20 +1,17 @@
-﻿using System.Linq;
+﻿namespace Atata.Bootstrap;
 
-namespace Atata.Bootstrap
+/// <summary>
+/// Represents Bootstrap list group item control.
+/// Default search finds the first occurring element with "list-group-item" class.
+/// </summary>
+/// <typeparam name="TOwner">The type of the owner page object.</typeparam>
+[ControlDefinition(ContainingClass = BSClass.ListGroupItem, ComponentTypeName = "list group item")]
+public class BSListGroupItem<TOwner> : Control<TOwner>
+    where TOwner : PageObject<TOwner>
 {
-    /// <summary>
-    /// Represents Bootstrap list group item control.
-    /// Default search finds the first occurring element with "list-group-item" class.
-    /// </summary>
-    /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
-    [ControlDefinition(ContainingClass = BSClass.ListGroupItem, ComponentTypeName = "list group item")]
-    public class BSListGroupItem<TOwner> : Control<TOwner>
-        where TOwner : PageObject<TOwner>
-    {
-        public ValueProvider<bool, TOwner> IsActive =>
-            CreateValueProvider("active state", () => DomClasses.Value.Contains(BSClass.Active));
+    public ValueProvider<bool, TOwner> IsActive =>
+        CreateValueProvider("active state", () => DomClasses.Value.Contains(BSClass.Active));
 
-        protected override bool GetIsEnabled() =>
-            !DomClasses.Value.Contains(BSClass.Disabled);
-    }
+    protected override bool GetIsEnabled() =>
+        !DomClasses.Value.Contains(BSClass.Disabled);
 }
