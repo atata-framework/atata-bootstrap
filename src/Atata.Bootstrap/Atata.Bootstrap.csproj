@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <LangVersion>12.0</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>2.2.0</Version>
+    <Version>3.0.0</Version>
     <Description>C#/.NET package containing a set of Atata components for automated web testing integration with Bootstrap Framework.
 
 Works with Bootstrap components of version 3.3 and 4.0+.
@@ -16,7 +16,7 @@ Atata Framework documentation: https://atata.io</Description>
     <RepositoryUrl>https://github.com/atata-framework/atata-bootstrap</RepositoryUrl>
     <PackageId>Atata.Bootstrap</PackageId>
     <PackageTags>atata automation testing test selenium webdriver browser bootstrap</PackageTags>
-    <PackageReleaseNotes>https://atata.io/blog/2024/01/14/atata.bootstrap-2.2.0-released/</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/atata-framework/atata-bootstrap/releases/tag/v3.0.0</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/atata-framework/atata-bootstrap</PackageProjectUrl>
   </PropertyGroup>
 
