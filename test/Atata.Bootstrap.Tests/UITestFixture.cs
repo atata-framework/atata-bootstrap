@@ -19,7 +19,10 @@ public abstract class UITestFixture
     public virtual void SetUp() =>
         AtataContext.Configure()
             .UseChrome()
-                .WithArguments("window-size=1200,800", "headless")
+                .WithArguments(
+                    "window-size=1200,800",
+                    "headless",
+                    "disable-search-engine-choice-screen")
             .UseBaseUrl(BaseUrl + _bootstrapVersionString)
             .UseCulture("en-US")
             .UseAllNUnitFeatures()
