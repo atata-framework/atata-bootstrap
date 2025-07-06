@@ -2,7 +2,7 @@
 
 public class BSListGroupTests : UITestFixture
 {
-    private ListGroupPage _page;
+    private ListGroupPage _page = null!;
 
     public BSListGroupTests(string bootstrapVersionString)
         : base(bootstrapVersionString)

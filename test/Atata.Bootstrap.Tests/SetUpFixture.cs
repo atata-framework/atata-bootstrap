@@ -7,7 +7,7 @@ namespace Atata.Bootstrap.Tests;
 [SetUpFixture]
 public class SetUpFixture
 {
-    private CliCommand _dotnetRunCommand;
+    private CliCommand? _dotnetRunCommand;
 
     [OneTimeSetUp]
     public async Task GlobalSetUpAsync() =>
@@ -35,7 +35,7 @@ public class SetUpFixture
 
         _dotnetRunCommand = dotnetCli.Start("run");
 
-        var testAppWait = new SafeWait<SetUpFixture>(this)
+        SafeWait<SetUpFixture> testAppWait = new(this)
         {
             Timeout = TimeSpan.FromSeconds(40),
             PollingInterval = TimeSpan.FromSeconds(0.2)
@@ -47,7 +47,7 @@ public class SetUpFixture
     [OneTimeTearDown]
     public void GlobalTearDown()
     {
-        if (_dotnetRunCommand != null)
+        if (_dotnetRunCommand is not null)
         {
             _dotnetRunCommand.Kill(true);
             _dotnetRunCommand.Dispose();

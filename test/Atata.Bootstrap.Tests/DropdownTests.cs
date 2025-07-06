@@ -2,7 +2,7 @@
 
 public class DropdownTests : UITestFixture
 {
-    private DropdownPage _page;
+    private DropdownPage _page = null!;
 
     public DropdownTests(string bootstrapVersionString)
         : base(bootstrapVersionString)

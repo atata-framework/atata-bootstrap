@@ -2,7 +2,7 @@
 
 public class DropdownToggleTests : UITestFixture
 {
-    private DropdownTogglePage _page;
+    private DropdownTogglePage _page = null!;
 
     public DropdownToggleTests(string bootstrapVersionString)
         : base(bootstrapVersionString)
