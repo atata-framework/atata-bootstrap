@@ -27,8 +27,8 @@ public class DropdownTests : UITestFixture
         control.Item1.Click();
         control.Item3.Click();
 
-        control.Item2.Content.Should.Equal("Item 2");
-        control.Item3.Content.Should.Equal("Item 3");
+        control.Item2.Content.Should.Be("Item 2");
+        control.Item3.Content.Should.Be("Item 3");
     }
 
     [Test]
