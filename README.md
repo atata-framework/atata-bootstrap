@@ -4,8 +4,8 @@
 [![GitHub release](https://img.shields.io/github/release/atata-framework/atata-bootstrap.svg)](https://github.com/atata-framework/atata-bootstrap/releases)
 [![Build status](https://dev.azure.com/atata-framework/atata-bootstrap/_apis/build/status/atata-bootstrap-ci?branchName=main)](https://dev.azure.com/atata-framework/atata-bootstrap/_build/latest?definitionId=29&branchName=main)
 [![Slack](https://img.shields.io/badge/join-Slack-green.svg?colorB=4EB898)](https://join.slack.com/t/atata-framework/shared_invite/zt-5j3lyln7-WD1ZtMDzXBhPm0yXLDBzbA)
-[![Atata Docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata.io)
-[![Twitter](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://twitter.com/AtataFramework)
+[![Atata docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata.io)
+[![X](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://x.com/AtataFramework)
 
 C#/.NET package containing a set of [Atata](https://github.com/atata-framework/atata) components for automated web testing integration with [Bootstrap Framework](https://getbootstrap.com/).
 
