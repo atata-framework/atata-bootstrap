@@ -14,7 +14,7 @@ public class BSDropdownToggle<TOwner> : Control<TOwner>
 {
     [FindByClass(BSClass.DropdownMenu, OuterXPath = "following-sibling::", Visibility = Visibility.Any)]
     [TraceLog]
-    protected Control<TOwner> DropdownMenu { get; private set; }
+    protected Control<TOwner> DropdownMenu { get; private set; } = null!;
 
     protected void OnBeforeAccessChild()
     {

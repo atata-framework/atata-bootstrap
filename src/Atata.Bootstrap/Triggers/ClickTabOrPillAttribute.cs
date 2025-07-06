@@ -23,12 +23,12 @@ public class ClickTabOrPillAttribute : TriggerAttribute
 
         string navItemName = tabPane.ComponentName;
 
-        BSNavItem<TOwner> navItem = tabPane.Parent.Controls
+        BSNavItem<TOwner>? navItem = tabPane.Parent.Controls
             .OfType<IUIComponent<TOwner>>()
             .FirstOrDefault(x => x.ComponentName == navItemName && (x is BSPill<TOwner> || x is BSTab<TOwner>))
             as BSNavItem<TOwner>;
 
-        if (navItem == null)
+        if (navItem is null)
         {
             string tabPillInnerXPath = $"(self::a | child::a)[@href='#{tabPane.DomProperties.Id.Value}']";
             string pillXPath = UIComponentResolver.GetControlDefinition(typeof(BSPill<TOwner>)).ScopeXPath;

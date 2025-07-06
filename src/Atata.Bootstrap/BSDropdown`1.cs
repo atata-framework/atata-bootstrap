@@ -13,11 +13,11 @@ public class BSDropdown<TOwner> : Control<TOwner>
 {
     [FindFirst]
     [TraceLog]
-    protected BSDropdownToggle<TOwner> Toggle { get; private set; }
+    protected BSDropdownToggle<TOwner> Toggle { get; private set; } = null!;
 
     [FindByClass(BSClass.DropdownMenu, Visibility = Visibility.Any)]
     [TraceLog]
-    protected Control<TOwner> DropdownMenu { get; private set; }
+    protected Control<TOwner> DropdownMenu { get; private set; } = null!;
 
     protected void OnBeforeAccessChild()
     {

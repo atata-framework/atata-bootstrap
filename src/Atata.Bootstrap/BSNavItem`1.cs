@@ -9,10 +9,10 @@ public class BSNavItem<TOwner> : Control<TOwner>
         CreateValueProvider("active state", GetIsActive);
 
     [FindByXPath("(self::* | child::*)[contains(concat(' ', normalize-space(@class), ' '), ' active ')]")]
-    protected Control<TOwner> ActiveIdentifier { get; private set; }
+    protected Control<TOwner> ActiveIdentifier { get; private set; } = null!;
 
     [FindByXPath("(self::* | child::*)[contains(concat(' ', normalize-space(@class), ' '), ' disabled ')]")]
-    protected Control<TOwner> DisabledIdentifier { get; private set; }
+    protected Control<TOwner> DisabledIdentifier { get; private set; } = null!;
 
     protected virtual bool GetIsActive() =>
         ActiveIdentifier.IsPresent;

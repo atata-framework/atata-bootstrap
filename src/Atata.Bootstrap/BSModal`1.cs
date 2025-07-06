@@ -13,5 +13,5 @@ public abstract class BSModal<TOwner> : PopupWindow<TOwner>
     }
 
     [FindByClass(TitleClassName)]
-    public Text<TOwner> ModalTitle { get; private set; }
+    public Text<TOwner> ModalTitle { get; private set; } = null!;
 }
