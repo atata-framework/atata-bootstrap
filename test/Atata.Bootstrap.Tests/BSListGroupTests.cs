@@ -1,6 +1,6 @@
 ﻿namespace Atata.Bootstrap.Tests;
 
-public class BSListGroupTests : UITestFixture
+public class BSListGroupTests : UITestSuite
 {
     private ListGroupPage _page = null!;
 
@@ -9,12 +9,9 @@ public class BSListGroupTests : UITestFixture
     {
     }
 
-    public override void SetUp()
-    {
-        base.SetUp();
-
+    [SetUp]
+    public void SetUp() =>
         _page = Go.To<ListGroupPage>();
-    }
 
     [Test]
     public void BSListGroup()

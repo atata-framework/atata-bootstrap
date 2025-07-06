@@ -1,6 +1,6 @@
 ﻿namespace Atata.Bootstrap.Tests;
 
-public class DropdownToggleTests : UITestFixture
+public class DropdownToggleTests : UITestSuite
 {
     private DropdownTogglePage _page = null!;
 
@@ -9,12 +9,9 @@ public class DropdownToggleTests : UITestFixture
     {
     }
 
-    public override void SetUp()
-    {
-        base.SetUp();
-
+    [SetUp]
+    public void SetUp() =>
         _page = Go.To<DropdownTogglePage>();
-    }
 
     [Test]
     public void BSDropdownToggle()

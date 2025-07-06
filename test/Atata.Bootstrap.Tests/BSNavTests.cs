@@ -1,6 +1,6 @@
 ﻿namespace Atata.Bootstrap.Tests;
 
-public class BSNavTests : UITestFixture
+public class BSNavTests : UITestSuite
 {
     public BSNavTests(string bootstrapVersionString)
         : base(bootstrapVersionString)

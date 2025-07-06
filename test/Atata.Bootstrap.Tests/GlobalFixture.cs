@@ -5,7 +5,7 @@ using Atata.WebDriverSetup;
 namespace Atata.Bootstrap.Tests;
 
 [SetUpFixture]
-public class SetUpFixture
+public class GlobalFixture : AtataGlobalFixture
 {
     private CliCommand? _dotnetRunCommand;
 
@@ -18,7 +18,7 @@ public class SetUpFixture
     private static bool IsTestAppRunning() =>
         Array.Exists(
             IPGlobalProperties.GetIPGlobalProperties().GetActiveTcpListeners(),
-            x => x.Port == UITestFixture.TestAppPort);
+            x => x.Port == UITestSuite.TestAppPort);
 
     private void SetUpTestApp()
     {
@@ -35,7 +35,7 @@ public class SetUpFixture
 
         _dotnetRunCommand = dotnetCli.Start("run");
 
-        SafeWait<SetUpFixture> testAppWait = new(this)
+        SafeWait<GlobalFixture> testAppWait = new(this)
         {
             Timeout = TimeSpan.FromSeconds(40),
             PollingInterval = TimeSpan.FromSeconds(0.2)
