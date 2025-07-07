@@ -40,10 +40,32 @@ Namespace is `Atata.Bootstrap`.
 demonstrates different automation testing approaches and features of the Atata Framework as well as Atata.Bootstrap package.
 Feel free to clone/fork it and check out the usage of Bootstrap components.
 
+## Community
+
+- Slack: [https://atata-framework.slack.com](https://join.slack.com/t/atata-framework/shared_invite/zt-5j3lyln7-WD1ZtMDzXBhPm0yXLDBzbA)
+- X: https://x.com/AtataFramework
+- Stack Overflow: https://stackoverflow.com/questions/tagged/atata
+
+## Feedback
+
+Any feedback, issues and feature requests are welcome.
+
+If you faced an issue please report it to [Atata.NUnit Issues](https://github.com/atata-framework/atata-nunit/issues),
+[ask a question on Stack Overflow](https://stackoverflow.com/questions/ask?tags=atata+csharp) using [atata](https://stackoverflow.com/questions/tagged/atata) tag
+or use another [Atata Contact](https://atata.io/contact/) way.
+
+## Contact author
+
+Contact me if you need a help in test automation using Atata Framework, or if you are looking for a quality test automation implementation for your project.
+
+- LinkedIn: https://www.linkedin.com/in/yevgeniy-shunevych
+- Email: yevgeniy.shunevych@gmail.com
+- Consulting: https://atata.io/consulting/
+
 ## Contributing
 
-*Check [Contributing Guidelines](CONTRIBUTING.md) and [How to Contribute a Component](CONTRIBUTING_COMPONENT.md)
-if you are interested in contributing to the repository.*
+Check [Contributing Guidelines](CONTRIBUTING.md) and [How to Contribute a Component](CONTRIBUTING_COMPONENT.md)
+if you are interested in contributing to the repository.
 
 ## SemVer
 
