@@ -2,12 +2,18 @@
 using Atata.Cli;
 using Atata.WebDriverSetup;
 
+[assembly: SetCulture("en-US")]
+[assembly: Parallelizable(ParallelScope.Fixtures)]
+
 namespace Atata.Bootstrap.Tests;
 
 [SetUpFixture]
 public class GlobalFixture : AtataGlobalFixture
 {
     private CliCommand? _dotnetRunCommand;
+
+    protected override void ConfigureAtataContextGlobalProperties(AtataContextGlobalProperties globalProperties) =>
+        globalProperties.UseRootNamespaceOf<GlobalFixture>();
 
     [OneTimeSetUp]
     public async Task GlobalSetUpAsync() =>
