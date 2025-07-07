@@ -1,4 +1,4 @@
-﻿var builder = WebApplication.CreateBuilder(new WebApplicationOptions { Args = args });
+﻿var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 
