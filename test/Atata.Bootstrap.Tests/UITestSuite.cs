@@ -20,7 +20,7 @@ public abstract class UITestSuite : AtataTestSuite
             .UseChrome(x => x
                 .WithArguments(
                     "window-size=1200,800",
-                    "headless",
+                    "headless=new",
                     "disable-search-engine-choice-screen"))
             .UseBaseUrl(BaseUrl + _bootstrapVersionString));
 }
