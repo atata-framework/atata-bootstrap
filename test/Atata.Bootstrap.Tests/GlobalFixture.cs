@@ -9,6 +9,9 @@ public class GlobalFixture : AtataGlobalFixture
 {
     private CliCommand? _dotnetRunCommand;
 
+    protected override void OnBeforeGlobalSetup() =>
+        ThreadPool.SetMinThreads(Environment.ProcessorCount * 4, Environment.ProcessorCount);
+
     [OneTimeSetUp]
     public async Task GlobalSetUpAsync() =>
         await Task.WhenAll(
