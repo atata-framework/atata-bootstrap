@@ -12,6 +12,15 @@ public class GlobalFixture : AtataGlobalFixture
     protected override void OnBeforeGlobalSetup() =>
         ThreadPool.SetMinThreads(Environment.ProcessorCount * 4, Environment.ProcessorCount);
 
+    protected override void ConfigureAtataContextBaseConfiguration(AtataContextBuilder builder) =>
+        builder.Sessions.AddWebDriver(x => x
+            .UseStartScopes(AtataContextScopes.Test)
+            .UseChrome(x => x
+                .WithArguments(
+                    "window-size=1200,800",
+                    "headless=new",
+                    "disable-search-engine-choice-screen")));
+
     [OneTimeSetUp]
     public async Task GlobalSetUpAsync() =>
         await Task.WhenAll(

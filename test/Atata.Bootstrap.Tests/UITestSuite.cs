@@ -16,11 +16,6 @@ public abstract class UITestSuite : AtataTestSuite
     public static string BaseUrl { get; } = $"http://localhost:{TestAppPort}/";
 
     protected override void ConfigureTestAtataContext(AtataContextBuilder builder) =>
-        builder.Sessions.AddWebDriver(x => x
-            .UseChrome(x => x
-                .WithArguments(
-                    "window-size=1200,800",
-                    "headless=new",
-                    "disable-search-engine-choice-screen"))
+        builder.Sessions.ConfigureWebDriver(x => x
             .UseBaseUrl(BaseUrl + _bootstrapVersionString));
 }
