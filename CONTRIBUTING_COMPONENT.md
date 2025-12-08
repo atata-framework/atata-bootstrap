@@ -2,11 +2,11 @@
 
 ## Development Prerequisites
 
-- Visual Studio 2019 (any edition)
+- Visual Studio 2026 or JetBrains Rider.
 
 ## Fork Repository
 
-Fork repository and open VS solution `Atata.Bootstrap.sln`.
+Fork repository and open solution `Atata.Bootstrap.slnx`.
 
 ## Component Development
 
@@ -38,11 +38,8 @@ You can override `GetIsReadOnly` and `GetIsEnabled` methods.
 
 ## Code Analysis
 
-Please use code analysis and fix produced issues.
-
-To run code analysis: In VS top menu choose "Analyze/Run Code Analysis/On Solution".
-Then verify warnings and messages in "Error List" panel.
+Please run code analysis in IDE and fix produced code analysis warnings when there are some.
 
 ## Pull Request
 
-Commit with push and [create pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
+Commit with push and [create pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork).

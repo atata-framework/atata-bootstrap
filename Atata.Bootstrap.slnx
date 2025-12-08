@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="azure-pipelines.release.yml" />
+    <File Path="azure-pipelines.runsettings" />
+    <File Path="azure-pipelines.yml" />
+    <File Path="CHANGELOG.md" />
+    <File Path="CONTRIBUTING.md" />
+    <File Path="CONTRIBUTING_COMPONENT.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/Atata.Bootstrap/Atata.Bootstrap.csproj" />
+  <Project Path="test/Atata.Bootstrap.TestApp/Atata.Bootstrap.TestApp.csproj" />
+  <Project Path="test/Atata.Bootstrap.Tests/Atata.Bootstrap.Tests.csproj" />
+</Solution>
