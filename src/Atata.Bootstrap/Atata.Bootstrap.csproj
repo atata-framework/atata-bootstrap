@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net462</TargetFrameworks>
     <Version>4.0.0-beta.4</Version>
     <Description>
-C#/.NET package containing a set of Atata components for automated web testing integration with Bootstrap Framework.
+C#/.NET library containing a set of Atata components for automated web testing integration with Bootstrap Framework.
 
 Works with Bootstrap components of version 3-5.
 
-The package targets .NET Standard 2.0, which supports .NET 5+, .NET Framework 4.6.1+ and .NET Core/Standard 2.0+.
-
 Atata.Bootstrap on GitHub: https://github.com/atata-framework/atata-bootstrap
 Atata Framework documentation: https://atata.io
+
+The package targets .NET 8.0 and .NET Framework 4.6.2.
     </Description>
     <RepositoryUrl>https://github.com/atata-framework/atata-bootstrap</RepositoryUrl>
     <PackageId>Atata.Bootstrap</PackageId>
