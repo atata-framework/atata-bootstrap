@@ -5,7 +5,10 @@
 /// Default search is performed by the content.
 /// </summary>
 /// <typeparam name="TOwner">The type of the owner page object.</typeparam>
-[ControlDefinition(ContainingClass = BSClass.DropdownToggle, ComponentTypeName = "dropdown toggle", IgnoreNameEndings = "DropdownButton,DropDownButton,Dropdown,DropDown,Button,DropdownToggle,DropDownToggle,Toggle")]
+[ControlDefinition(
+    ContainingClass = BSClass.DropdownToggle,
+    ComponentTypeName = "dropdown toggle",
+    IgnoreNameEndings = "DropdownButton,DropDownButton,Dropdown,DropDown,Button,DropdownToggle,DropDownToggle,Toggle")]
 [FindByContent]
 [FindSettings(OuterXPath = "following-sibling::*[1]//", TargetAllChildren = true)]
 [InvokeMethod(nameof(OnBeforeAccessChild), TriggerEvents.BeforeAccess, TargetChildren = true, ExcludeTargetName = nameof(DropdownMenu))]
