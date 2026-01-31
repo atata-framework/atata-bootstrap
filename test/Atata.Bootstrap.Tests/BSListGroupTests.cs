@@ -1,6 +1,6 @@
 ﻿namespace Atata.Bootstrap.Tests;
 
-public class BSListGroupTests : UITestSuite
+public sealed class BSListGroupTests : UITestSuite
 {
     private ListGroupPage _page = null!;
 

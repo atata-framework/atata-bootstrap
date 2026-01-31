@@ -5,7 +5,7 @@ namespace Atata.Bootstrap.Tests;
 using _ = DropdownPage;
 
 [Url("dropdown")]
-public class DropdownPage : Page<_>
+public sealed class DropdownPage : Page<_>
 {
     public RegularDropdown Regular { get; private set; }
 

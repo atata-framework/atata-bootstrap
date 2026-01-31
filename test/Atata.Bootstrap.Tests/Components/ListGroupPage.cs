@@ -5,7 +5,7 @@ namespace Atata.Bootstrap.Tests;
 using _ = ListGroupPage;
 
 [Url("listgroup")]
-public class ListGroupPage : Page<_>
+public sealed class ListGroupPage : Page<_>
 {
     public ControlList<BSListGroup<_>, _> AllListGroups { get; private set; }
 

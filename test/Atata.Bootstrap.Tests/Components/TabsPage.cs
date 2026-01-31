@@ -6,7 +6,7 @@ using _ = TabsPage;
 
 [Url("tabs")]
 [TermFindSettings(Case = TermCase.LowerMerged, TargetAttributeType = typeof(FindByIdAttribute), TargetAnyType = true)]
-public class TabsPage : Page<_>
+public sealed class TabsPage : Page<_>
 {
     public TabPane1 Pane1 { get; private set; }
 

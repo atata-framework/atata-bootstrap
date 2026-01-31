@@ -1,6 +1,6 @@
 ﻿namespace Atata.Bootstrap.Tests;
 
-public class DropdownTests : UITestSuite
+public sealed class DropdownTests : UITestSuite
 {
     private DropdownPage _page = null!;
 
