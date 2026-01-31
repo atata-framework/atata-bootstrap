@@ -3,7 +3,6 @@
 [TestFixture("v3")]
 [TestFixture("v4")]
 [TestFixture("v5")]
-[Parallelizable]
 public abstract class UITestSuite : AtataTestSuite
 {
     public const int TestAppPort = 59372;
