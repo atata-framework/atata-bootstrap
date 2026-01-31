@@ -1,9 +1,7 @@
-﻿using System.Net.NetworkInformation;
-
-namespace Atata.Bootstrap.Tests;
+﻿namespace Atata.Bootstrap.Tests;
 
 [SetUpFixture]
-public class GlobalFixture : AtataGlobalFixture
+public sealed class GlobalFixture : AtataGlobalFixture
 {
     protected override void OnBeforeGlobalSetup() =>
         ThreadPool.SetMinThreads(Environment.ProcessorCount * 4, Environment.ProcessorCount);
@@ -25,17 +23,10 @@ public class GlobalFixture : AtataGlobalFixture
     {
         builder.SetUpWebDriversForUse();
 
-        if (!IsTestAppRunning())
-        {
-            builder.Sessions.AddWebApplication(x => x
-                .Use<Program>()
-                .UseKestrel(UITestSuite.TestAppPort)
-                .UseMinimumApplicationLogLevel(Microsoft.Extensions.Logging.LogLevel.Warning));
-        }
+        builder.Sessions.AddWebApplication(x => x
+            .Use<Program>()
+            .UseKestrel(UITestSuite.TestAppPort)
+            .UseStartWhenKestrelPortIsAvailable()
+            .UseMinimumApplicationLogLevel(Microsoft.Extensions.Logging.LogLevel.Warning));
     }
-
-    private static bool IsTestAppRunning() =>
-        IPGlobalProperties.GetIPGlobalProperties()
-            .GetActiveTcpListeners()
-            .Any(x => x.Port == UITestSuite.TestAppPort);
 }
