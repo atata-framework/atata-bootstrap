@@ -19,7 +19,7 @@ public class ClickTabOrPillAttribute : TriggerAttribute
         where TOwner : PageObject<TOwner>
     {
         if (context.Component.GetAncestorOrSelf<BSTabPane<TOwner>>() is not IUIComponent<TOwner> tabPane)
-            throw new InvalidOperationException($"Cannot find '{nameof(BSTabPane<TOwner>)}' ancestor.");
+            throw new InvalidOperationException($"Cannot find '{nameof(BSTabPane<>)}' ancestor.");
 
         string navItemName = tabPane.ComponentName;
 
