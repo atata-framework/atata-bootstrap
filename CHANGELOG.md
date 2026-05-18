@@ -10,7 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Change package target frameworks from .NET Standard 2.0 to .NET 8.0 and .NET Framework 4.6.2.
-- Enable nullable reference types.
-- Upgrade Atata package reference to v4.0.0-beta.12.
+- Upgrade Atata package reference to v4.0.0-beta.14.
 
-[Unreleased]: https://github.com/atata-framework/atata-webdriverextras/compare/v3.0.0...HEAD
+## [3.1.0] - 2026-05-18
+
+### Changed
+
+- Enable nullable reference types.
+- Upgrade Atata package reference to v3.11.0.
+
+[Unreleased]: https://github.com/atata-framework/atata-bootstrap/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/atata-framework/atata-bootstrap/compare/v3.0.0...v3.1.0
